@@ -292,7 +292,7 @@ Run the design-session tests before any app code. They prove each data source re
 - [x] Transforms: computed CPI YoY for the last 3 months matches the BLS headline figure to one decimal. (Passes only on the unadjusted series, see results below.)
 - [x] Alpha Vantage `EARNINGS_CALENDAR` returns CSV with symbol, name, and report date for the next 3 months, using 1 call. (Nov 2, 2026: 3,454 rows, 2026-11-02 to 2027-01-28.)
 - [x] Rule engine: generated dates for options expiration, quad witching, ISM, and VIX expiration over the next 12 months match the official calendars, including holiday shifts. (Tested against third-party listings, see results below.)
-- [ ] GitHub: a manually dispatched run commits `events.json`, and the file is readable at its raw URL without a token.
+- [x] GitHub: a manually dispatched run commits `events.json`, and the file is readable at its raw URL without a token. (Nov 2, 2026: run 41409922648, commit 3cc704d.)
 
 **Design-session results (Nov 2, 2026)**
 
