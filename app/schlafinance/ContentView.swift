@@ -2,7 +2,6 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var model: AppModel
-    @State private var showingWarnings = false
     @State private var showingCategories = false
 
     var body: some View {
@@ -72,7 +71,7 @@ struct ContentView: View {
             }
             .help("Show only high-impact events")
 
-            statusButton
+            StatusButton()
         }
     }
 
@@ -112,21 +111,34 @@ struct ContentView: View {
         return count == Categories.all.count ? "Filter" : "Filter (\(count))"
     }
 
-    @ViewBuilder
-    private var statusButton: some View {
-        if let file = model.file {
+}
+
+/// Its own view with its own state, so the toolbar keeps a stable anchor for the popover.
+struct StatusButton: View {
+    @EnvironmentObject private var model: AppModel
+    @State private var showingWarnings = false
+
+    var body: some View {
+        Button { showingWarnings.toggle() } label: {
             // Redraws on its own, so an app left open still turns red past 36 hours.
             TimelineView(.periodic(from: .now, by: 60)) { context in
-                let status = DataStatus(generatedAt: file.generatedAt, warnings: file.warnings, now: context.date)
-                Button { showingWarnings = true } label: {
-                    Text(status.text).foregroundStyle(status.isAlert ? Color.red : Color.secondary)
-                }
+                label(at: context.date)
             }
-            .popover(isPresented: $showingWarnings) { warningsPopover }
+        }
+        .popover(isPresented: $showingWarnings, arrowEdge: .bottom) { warnings }
+    }
+
+    @ViewBuilder
+    private func label(at now: Date) -> some View {
+        if let file = model.file {
+            let status = DataStatus(generatedAt: file.generatedAt, warnings: file.warnings, now: now)
+            Text(status.text).foregroundStyle(status.isAlert ? Color.red : Color.secondary)
+        } else {
+            Text("No data").foregroundStyle(.secondary)
         }
     }
 
-    private var warningsPopover: some View {
+    private var warnings: some View {
         VStack(alignment: .leading, spacing: 8) {
             if let file = model.file {
                 Text("Data from \(file.generatedAt.formatted(date: .abbreviated, time: .shortened))")

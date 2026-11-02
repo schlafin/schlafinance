@@ -327,10 +327,10 @@ Run the design-session tests before any app code. They prove each data source re
 - [ ] The Action has run on schedule for 7 consecutive days with no manual intervention.
 - [ ] `events.json` contains every catalog definition with occurrences across the full window.
 - [ ] Month, week, and day views show the same events for the same dates.
-- [ ] Category filter and star toggle combine correctly, and persist after restarting the app.
+- [x] Category filter and star toggle combine correctly, and persist after restarting the app.
 - [ ] Every released `fred` event shows its actuals, and its drill-down lists the trailing 12 periods.
 - [x] Times display correctly in local time on both sides of a US daylight-saving change. (Unit tests, and seen in the app around Nov 1, 2026.)
-- [ ] With the network off, the app opens and shows the cached calendar.
+- [x] With the network off, the app opens and shows the cached calendar. (Tested with an unreachable data URL, not by turning the network off.)
 - [x] With `generated_at` set 40 hours back, the status line turns red. (Unit test of the status logic, not run in the app.)
 
 ## Open decisions and later versions
