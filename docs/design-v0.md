@@ -330,7 +330,13 @@ Run the design-session tests before any app code. They prove each data source re
 
 ## Open decisions and later versions
 
-**Still to enter in `manual_events.yaml`**: Beige Book, ECB, BoJ, BoE, Treasury refunding, WASDE, Jackson Hole, stress tests, Fed Chair testimony, OPEC+, and debt deadlines. Until these exist, `events.json` carries a "No occurrences" warning and the app's status line stays red.
+**Gaps in `manual_events.yaml`** (Nov 2, 2026; every definition has dates, but these are incomplete):
+
+- Not published yet: Beige Book 2027, Treasury refunding after Nov 4, 2026, and WASDE 2027. Add them as they appear; Treasury names only the next date in each statement.
+- Past dates not yet sourced: WASDE before Nov 2025, Jackson Hole 2025, stress tests 2025, and most Fed Chair testimony and OPEC+ meetings.
+- Weaker source: ECB dates before Dec 2026 come from third-party listings, not the ECB.
+- No debt ceiling date is entered; no current X-date was found.
+- Fed testimony, OPEC+, and fiscal deadlines need entering as they are announced, so future coverage will always be short.
 
 **Decide in the design session**
 

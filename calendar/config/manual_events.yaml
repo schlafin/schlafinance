@@ -70,6 +70,122 @@ events:
   - { definition: market_holidays, date: 2027-11-26, early_close: "13:00", note: "Early close" }
   - { definition: market_holidays, date: 2027-12-24, note: "Christmas Day (observed)" }
 
+  # Beige Book, from the Fed's Beige Book pages. 2027 dates are not published there yet.
+  - { definition: beige_book, date: 2025-01-15 }
+  - { definition: beige_book, date: 2025-03-05 }
+  - { definition: beige_book, date: 2025-04-23 }
+  - { definition: beige_book, date: 2025-06-04 }
+  - { definition: beige_book, date: 2025-07-16 }
+  - { definition: beige_book, date: 2025-09-03 }
+  - { definition: beige_book, date: 2025-10-15 }
+  - { definition: beige_book, date: 2025-11-26 }
+  - { definition: beige_book, date: 2026-01-14 }
+  - { definition: beige_book, date: 2026-03-04 }
+  - { definition: beige_book, date: 2026-04-15 }
+  - { definition: beige_book, date: 2026-06-03 }
+  - { definition: beige_book, date: 2026-07-15 }
+  - { definition: beige_book, date: 2026-09-02 }
+  - { definition: beige_book, date: 2026-10-14 }
+  - { definition: beige_book, date: 2026-11-25 }
+
+  # ECB decisions. 2026-12 onward from ecb.europa.eu; earlier dates from third-party
+  # listings, because the ECB's calendar page shows upcoming meetings only.
+  - { definition: ecb_decision, date: 2025-01-30 }
+  - { definition: ecb_decision, date: 2025-03-06 }
+  - { definition: ecb_decision, date: 2025-04-17 }
+  - { definition: ecb_decision, date: 2025-06-05 }
+  - { definition: ecb_decision, date: 2025-07-24 }
+  - { definition: ecb_decision, date: 2025-09-11 }
+  - { definition: ecb_decision, date: 2025-10-30 }
+  - { definition: ecb_decision, date: 2025-12-18 }
+  - { definition: ecb_decision, date: 2026-02-05 }
+  - { definition: ecb_decision, date: 2026-03-19 }
+  - { definition: ecb_decision, date: 2026-04-30 }
+  - { definition: ecb_decision, date: 2026-06-11 }
+  - { definition: ecb_decision, date: 2026-07-23 }
+  - { definition: ecb_decision, date: 2026-09-10 }
+  - { definition: ecb_decision, date: 2026-10-29 }
+  - { definition: ecb_decision, date: 2026-12-17 }
+  - { definition: ecb_decision, date: 2027-02-04 }
+  - { definition: ecb_decision, date: 2027-03-18 }
+
+  # BoJ decisions, the second day of each meeting, from boj.or.jp.
+  - { definition: boj_decision, date: 2025-01-24 }
+  - { definition: boj_decision, date: 2025-03-19 }
+  - { definition: boj_decision, date: 2025-05-01 }
+  - { definition: boj_decision, date: 2025-06-17 }
+  - { definition: boj_decision, date: 2025-07-31 }
+  - { definition: boj_decision, date: 2025-09-19 }
+  - { definition: boj_decision, date: 2025-10-30 }
+  - { definition: boj_decision, date: 2025-12-19 }
+  - { definition: boj_decision, date: 2026-01-23 }
+  - { definition: boj_decision, date: 2026-03-19 }
+  - { definition: boj_decision, date: 2026-04-28 }
+  - { definition: boj_decision, date: 2026-06-16 }
+  - { definition: boj_decision, date: 2026-07-31 }
+  - { definition: boj_decision, date: 2026-09-18 }
+  - { definition: boj_decision, date: 2026-10-30 }
+  - { definition: boj_decision, date: 2026-12-18 }
+  - { definition: boj_decision, date: 2027-01-22 }
+  - { definition: boj_decision, date: 2027-03-18 }
+
+  # BoE decisions, from bankofengland.co.uk.
+  - { definition: boe_decision, date: 2025-02-06 }
+  - { definition: boe_decision, date: 2025-03-20 }
+  - { definition: boe_decision, date: 2025-05-08 }
+  - { definition: boe_decision, date: 2025-06-19 }
+  - { definition: boe_decision, date: 2025-08-07 }
+  - { definition: boe_decision, date: 2025-09-18 }
+  - { definition: boe_decision, date: 2025-11-06 }
+  - { definition: boe_decision, date: 2025-12-18 }
+  - { definition: boe_decision, date: 2026-02-05 }
+  - { definition: boe_decision, date: 2026-03-19 }
+  - { definition: boe_decision, date: 2026-04-30 }
+  - { definition: boe_decision, date: 2026-06-18 }
+  - { definition: boe_decision, date: 2026-07-30 }
+  - { definition: boe_decision, date: 2026-09-17 }
+  - { definition: boe_decision, date: 2026-11-05 }
+  - { definition: boe_decision, date: 2026-12-17 }
+  - { definition: boe_decision, date: 2027-02-04 }
+  - { definition: boe_decision, date: 2027-03-18 }
+
+  # Treasury refunding. Treasury names only the next date in each statement.
+  - { definition: treasury_refunding, date: 2025-02-05, time: "08:30" }
+  - { definition: treasury_refunding, date: 2025-04-30, time: "08:30" }
+  - { definition: treasury_refunding, date: 2025-07-30, time: "08:30" }
+  - { definition: treasury_refunding, date: 2025-11-05, time: "08:30" }
+  - { definition: treasury_refunding, date: 2026-02-04, time: "08:30" }
+  - { definition: treasury_refunding, date: 2026-05-06, time: "08:30" }
+  - { definition: treasury_refunding, date: 2026-08-05, time: "08:30" }
+  - { definition: treasury_refunding, date: 2026-11-04, time: "08:30" }
+
+  # WASDE: USDA's 2026 schedule. 2025 is incomplete: November was moved to the 14th,
+  # and October was canceled by the shutdown. The other 2025 dates are not sourced yet.
+  - { definition: wasde, date: 2025-11-14 }
+  - { definition: wasde, date: 2026-01-12 }
+  - { definition: wasde, date: 2026-02-10 }
+  - { definition: wasde, date: 2026-03-10 }
+  - { definition: wasde, date: 2026-04-09 }
+  - { definition: wasde, date: 2026-05-12 }
+  - { definition: wasde, date: 2026-06-11 }
+  - { definition: wasde, date: 2026-07-10 }
+  - { definition: wasde, date: 2026-08-12 }
+  - { definition: wasde, date: 2026-09-11 }
+  - { definition: wasde, date: 2026-10-09 }
+  - { definition: wasde, date: 2026-11-10 }
+  - { definition: wasde, date: 2026-12-10 }
+
+  # Ad hoc events: entered when announced, so history here is partial.
+  - { definition: jackson_hole, date: 2026-08-27, note: "Symposium runs Aug 27-29" }
+  - { definition: stress_tests, date: 2026-06-24, time: "16:00" }
+  - { definition: fed_chair_testimony, date: 2025-02-12, note: "House Financial Services" }
+  - { definition: fed_chair_testimony, date: 2026-07-14, note: "House Financial Services" }
+  - { definition: fed_chair_testimony, date: 2026-07-15, time: "10:00", note: "Senate Banking" }
+  - { definition: opec_meetings, date: 2026-09-06 }
+  - { definition: opec_meetings, date: 2026-10-04 }
+  - { definition: opec_meetings, date: 2026-11-01 }
+  - { definition: debt_deadlines, date: 2026-12-11, note: "Continuing resolution expires" }
+
   # Existing home sales: FRED lists no dates for this release, so NAR's are entered here.
   # Actuals still come from EXHOSLUSM495S. FRED keeps only 13 months of values, so
   # entries start at the oldest period it holds. Times are ET.
