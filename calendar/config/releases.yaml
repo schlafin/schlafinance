@@ -1,30 +1,391 @@
-# FRED-backed events. Release IDs and series confirmed against FRED on 2026-11-02.
-# Stars, times and transforms are added when the fetcher is built; see docs/design-v0.md.
-releases:
-  fed_balance_sheet:     { release_id: 20,  series: [WALCL] }
-  employment_situation:  { release_id: 50,  series: [PAYEMS, UNRATE, CES0500000003] }
-  initial_claims:        { release_id: 180, series: [ICSA] }
-  jolts:                 { release_id: 192, series: [JTSJOL] }
-  employment_cost_index: { release_id: 11,  series: [ECIALLCIV] }
-  # YoY uses the unadjusted series (the BLS headline basis); MoM uses the adjusted ones.
-  cpi:                   { release_id: 10,  series: [CPIAUCNS, CPILFENS, CPIAUCSL, CPILFESL] }
-  pce:                   { release_id: 54,  series: [PCEPI, PCEPILFE] }
-  ppi:                   { release_id: 46,  series: [PPIFIS] }
-  import_prices:         { release_id: 188, series: [IR] }
-  gdp:                   { release_id: 53,  series: [A191RL1Q225SBEA] }
-  retail_sales:          { release_id: 9,   series: [RSAFS] }
-  industrial_production: { release_id: 13,  series: [INDPRO, TCU] }
-  # Release 95 is the M3 survey: two dates a month, only the advance one is this event.
-  durable_goods:         { release_id: 95,  series: [DGORDER] }
-  empire_state:          { release_id: 321, series: [GACDISA066MSFRBNY] }
-  philly_fed:            { release_id: 351, series: [GACDFSA066MSFRBPHI] }
-  umich_sentiment:       { release_id: 91,  series: [UMCSENT] }
-  consumer_credit:       { release_id: 14,  series: [TOTALSL] }
-  housing_starts:        { release_id: 27,  series: [HOUST, PERMIT] }
-  new_home_sales:        { release_id: 97,  series: [HSN1F] }
-  # FRED lists no dates for release 291, so dates come from manual_events.yaml.
-  # The series keeps only 13 months.
-  existing_home_sales:   { release_id: 291, dates: manual, series: [EXHOSLUSM495S] }
-  case_shiller:          { release_id: 199, series: [CSUSHPINSA] }
-  treasury_statement:    { release_id: 363, series: [MTSDS133FMS] }
-  trade_balance:         { release_id: 51,  series: [BOPGSTB] }
+# Event catalog: one entry per event definition, 53 in all.
+# FRED release IDs and series confirmed against FRED on 2026-11-02.
+#
+# fred block:
+#   release_id     FRED release
+#   frequency      M (default), W or Q
+#   pick_in_month  first or last, for releases with a second monthly date that is not this event
+#   revisions      true when later dates in a period are re-estimates (GDP)
+#   dates: manual  release dates come from manual_events.yaml
+# actual_series transforms: level (default), diff, mom_pct, qoq_pct, yoy_pct.
+# scale divides the result; decimals defaults to 1.
+definitions:
+  # Monetary
+  fomc_decision:
+    { name: FOMC rate decision, short: FOMC, category: Monetary, star: true, source_type: manual, time_et: "14:00",
+      description: "Federal Reserve policy rate decision." }
+  sep:
+    { name: Summary of Economic Projections, short: SEP, category: Monetary, star: true, source_type: manual, time_et: "14:00",
+      description: "FOMC participants' economic and rate projections." }
+  fomc_minutes:
+    { name: FOMC minutes, short: FOMC minutes, category: Monetary, star: false, source_type: rule, time_et: "14:00",
+      description: "Minutes of the previous FOMC meeting." }
+  beige_book:
+    { name: Beige Book, short: Beige Book, category: Monetary, star: false, source_type: manual, time_et: "14:00",
+      description: "Fed summary of regional economic conditions." }
+  fed_balance_sheet:
+    name: Fed balance sheet (H.4.1)
+    short: H.4.1
+    category: Monetary
+    star: false
+    source_type: fred
+    time_et: "16:30"
+    description: "Weekly statement of Federal Reserve assets and liabilities."
+    fred: { release_id: 20, frequency: W }
+    actual_series:
+      - { key: total_assets, label: Total assets, unit: $bn, series: WALCL, scale: 1000, decimals: 0 }
+  fed_chair_testimony:
+    { name: Fed Chair testimony, short: Fed testimony, category: Monetary, star: false, source_type: manual,
+      description: "Fed Chair testimony to Congress." }
+  jackson_hole:
+    { name: Jackson Hole symposium, short: Jackson Hole, category: Monetary, star: false, source_type: manual,
+      description: "Kansas City Fed annual economic symposium." }
+  stress_tests:
+    { name: Bank stress test results, short: Stress tests, category: Monetary, star: false, source_type: manual,
+      description: "Federal Reserve annual bank stress test results." }
+
+  # Labor
+  employment_situation:
+    name: Employment Situation
+    short: Jobs report
+    category: Labor
+    star: true
+    source_type: fred
+    time_et: "08:30"
+    description: "Payrolls, unemployment and wages, BLS."
+    fred: { release_id: 50 }
+    actual_series:
+      - { key: payrolls_change, label: Payrolls change, unit: k, series: PAYEMS, transform: diff, decimals: 0 }
+      - { key: unemployment_rate, label: Unemployment rate, unit: "%", series: UNRATE }
+      - { key: hourly_earnings_yoy, label: Avg hourly earnings YoY, unit: "%", series: CES0500000003, transform: yoy_pct }
+  initial_claims:
+    name: Initial jobless claims
+    short: Jobless claims
+    category: Labor
+    star: true
+    source_type: fred
+    time_et: "08:30"
+    description: "Weekly new unemployment insurance claims, DOL."
+    fred: { release_id: 180, frequency: W }
+    actual_series:
+      - { key: initial_claims, label: Initial claims, unit: k, series: ICSA, scale: 1000, decimals: 0 }
+  jolts:
+    name: JOLTS
+    short: JOLTS
+    category: Labor
+    star: false
+    source_type: fred
+    time_et: "10:00"
+    description: "Job openings and labor turnover, BLS."
+    fred: { release_id: 192 }
+    actual_series:
+      - { key: job_openings, label: Job openings, unit: k, series: JTSJOL, decimals: 0 }
+  adp:
+    { name: ADP employment, short: ADP, category: Labor, star: false, source_type: rule, time_et: "08:15",
+      description: "ADP private payrolls estimate." }
+  employment_cost_index:
+    name: Employment Cost Index
+    short: ECI
+    category: Labor
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "Quarterly change in total compensation, BLS."
+    fred: { release_id: 11, frequency: Q }
+    actual_series:
+      - { key: qoq, label: ECI QoQ, unit: "%", series: ECIALLCIV, transform: qoq_pct }
+
+  # Inflation
+  cpi:
+    name: Consumer Price Index
+    short: CPI
+    category: Inflation
+    star: true
+    source_type: fred
+    time_et: "08:30"
+    description: "Headline and core consumer inflation, BLS."
+    fred: { release_id: 10 }
+    # YoY uses the unadjusted series, the BLS headline basis; MoM uses the adjusted ones.
+    actual_series:
+      - { key: headline_yoy, label: CPI YoY, unit: "%", series: CPIAUCNS, transform: yoy_pct }
+      - { key: headline_mom, label: CPI MoM, unit: "%", series: CPIAUCSL, transform: mom_pct }
+      - { key: core_yoy, label: Core CPI YoY, unit: "%", series: CPILFENS, transform: yoy_pct }
+      - { key: core_mom, label: Core CPI MoM, unit: "%", series: CPILFESL, transform: mom_pct }
+  pce:
+    name: PCE price index
+    short: PCE
+    category: Inflation
+    star: true
+    source_type: fred
+    time_et: "08:30"
+    description: "The Fed's preferred inflation measure, BEA."
+    fred: { release_id: 54 }
+    actual_series:
+      - { key: pce_yoy, label: PCE YoY, unit: "%", series: PCEPI, transform: yoy_pct }
+      - { key: core_pce_yoy, label: Core PCE YoY, unit: "%", series: PCEPILFE, transform: yoy_pct }
+  ppi:
+    name: Producer Price Index
+    short: PPI
+    category: Inflation
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "Final demand producer prices, BLS."
+    fred: { release_id: 46 }
+    actual_series:
+      - { key: final_demand_yoy, label: PPI YoY, unit: "%", series: PPIFIS, transform: yoy_pct }
+      - { key: final_demand_mom, label: PPI MoM, unit: "%", series: PPIFIS, transform: mom_pct }
+  import_prices:
+    name: Import prices
+    short: Import prices
+    category: Inflation
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "Prices of US imports, BLS."
+    fred: { release_id: 188 }
+    actual_series:
+      - { key: yoy, label: Import prices YoY, unit: "%", series: IR, transform: yoy_pct }
+
+  # Growth
+  gdp:
+    name: Gross Domestic Product
+    short: GDP
+    category: Growth
+    star: true
+    source_type: fred
+    time_et: "08:30"
+    description: "Real GDP growth, annualized, BEA."
+    fred: { release_id: 53, frequency: Q, revisions: true }
+    actual_series:
+      - { key: real_gdp, label: Real GDP QoQ annualized, unit: "%", series: A191RL1Q225SBEA }
+  ism_manufacturing:
+    { name: ISM Manufacturing PMI, short: ISM Mfg, category: Growth, star: true, source_type: rule, time_et: "10:00",
+      description: "Survey of US manufacturing purchasing managers." }
+  ism_services:
+    { name: ISM Services PMI, short: ISM Services, category: Growth, star: true, source_type: rule, time_et: "10:00",
+      description: "Survey of US services purchasing managers." }
+  retail_sales:
+    name: Retail sales
+    short: Retail sales
+    category: Growth
+    star: true
+    source_type: fred
+    time_et: "08:30"
+    description: "Advance monthly retail and food services sales, Census."
+    fred: { release_id: 9 }
+    actual_series:
+      - { key: mom, label: Retail sales MoM, unit: "%", series: RSAFS, transform: mom_pct }
+  industrial_production:
+    name: Industrial production
+    short: Industrial prod.
+    category: Growth
+    star: false
+    source_type: fred
+    time_et: "09:15"
+    description: "Industrial output and capacity utilization, Federal Reserve."
+    fred: { release_id: 13 }
+    actual_series:
+      - { key: mom, label: Industrial production MoM, unit: "%", series: INDPRO, transform: mom_pct }
+      - { key: capacity_utilization, label: Capacity utilization, unit: "%", series: TCU }
+  durable_goods:
+    name: Durable goods orders
+    short: Durable goods
+    category: Growth
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "Advance report on new orders for durable goods, Census."
+    # Release 95 is the M3 survey: the early-month date is the full report.
+    fred: { release_id: 95, pick_in_month: last }
+    actual_series:
+      - { key: mom, label: Durable goods MoM, unit: "%", series: DGORDER, transform: mom_pct }
+  empire_state:
+    name: Empire State survey
+    short: Empire State
+    category: Growth
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "New York Fed manufacturing survey."
+    fred: { release_id: 321 }
+    actual_series:
+      - { key: general_conditions, label: General business conditions, unit: index, series: GACDISA066MSFRBNY }
+  philly_fed:
+    name: Philadelphia Fed survey
+    short: Philly Fed
+    category: Growth
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "Philadelphia Fed manufacturing survey."
+    fred: { release_id: 351 }
+    actual_series:
+      - { key: current_activity, label: Current activity, unit: index, series: GACDFSA066MSFRBPHI }
+  chicago_pmi:
+    { name: Chicago PMI, short: Chicago PMI, category: Growth, star: false, source_type: rule, time_et: "09:45",
+      description: "Chicago-area business barometer." }
+
+  # Consumer
+  umich_sentiment:
+    name: UMich consumer sentiment
+    short: UMich sentiment
+    category: Consumer
+    star: false
+    source_type: fred
+    time_et: "10:00"
+    description: "University of Michigan consumer sentiment index."
+    fred: { release_id: 91 }
+    actual_series:
+      - { key: sentiment, label: Sentiment index, unit: index, series: UMCSENT }
+  conference_board:
+    { name: Conference Board confidence, short: Conf. Board, category: Consumer, star: false, source_type: rule, time_et: "10:00",
+      description: "Conference Board consumer confidence index." }
+  consumer_credit:
+    name: Consumer credit
+    short: Consumer credit
+    category: Consumer
+    star: false
+    source_type: fred
+    time_et: "15:00"
+    description: "Total consumer credit outstanding, Federal Reserve G.19."
+    fred: { release_id: 14 }
+    actual_series:
+      - { key: total, label: Total consumer credit, unit: $bn, series: TOTALSL, scale: 1000 }
+
+  # Housing
+  housing_starts:
+    name: Housing starts and permits
+    short: Housing starts
+    category: Housing
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "New residential construction, Census."
+    # The second monthly date is the revised permits report.
+    fred: { release_id: 27, pick_in_month: first }
+    actual_series:
+      - { key: starts, label: Housing starts, unit: k, series: HOUST, decimals: 0 }
+      - { key: permits, label: Building permits, unit: k, series: PERMIT, decimals: 0 }
+  new_home_sales:
+    name: New home sales
+    short: New home sales
+    category: Housing
+    star: false
+    source_type: fred
+    time_et: "10:00"
+    description: "New single-family home sales, annualized, Census."
+    fred: { release_id: 97 }
+    actual_series:
+      - { key: sales, label: New home sales, unit: k, series: HSN1F, decimals: 0 }
+  existing_home_sales:
+    name: Existing home sales
+    short: Existing home sales
+    category: Housing
+    star: false
+    source_type: fred
+    time_et: "10:00"
+    description: "Existing home sales, annualized, NAR. FRED keeps 13 months only."
+    # FRED lists no dates for release 291, and the series is not in ALFRED.
+    fred: { release_id: 291, dates: manual }
+    actual_series:
+      - { key: sales, label: Existing home sales, unit: millions, series: EXHOSLUSM495S, scale: 1000000, decimals: 2 }
+  case_shiller:
+    name: Case-Shiller home prices
+    short: Case-Shiller
+    category: Housing
+    star: false
+    source_type: fred
+    time_et: "09:00"
+    description: "S&P Cotality Case-Shiller national home price index."
+    fred: { release_id: 199 }
+    actual_series:
+      - { key: yoy, label: National index YoY, unit: "%", series: CSUSHPINSA, transform: yoy_pct }
+
+  # Treasury and Fiscal
+  treasury_refunding:
+    { name: Treasury quarterly refunding, short: Refunding, category: Treasury, star: true, source_type: manual,
+      description: "Treasury's quarterly debt issuance announcement." }
+  treasury_statement:
+    name: Monthly Treasury Statement
+    short: Treasury statement
+    category: Fiscal
+    star: false
+    source_type: fred
+    time_et: "14:00"
+    description: "Monthly federal receipts, outlays and balance."
+    fred: { release_id: 363 }
+    actual_series:
+      - { key: balance, label: Surplus or deficit, unit: $bn, series: MTSDS133FMS, scale: 1000 }
+  debt_deadlines:
+    { name: Debt ceiling and funding deadlines, short: Fiscal deadline, category: Fiscal, star: false, source_type: manual,
+      description: "Debt ceiling and government funding deadlines." }
+
+  # Trade
+  trade_balance:
+    name: Trade balance
+    short: Trade balance
+    category: Trade
+    star: false
+    source_type: fred
+    time_et: "08:30"
+    description: "US goods and services trade balance, Census and BEA."
+    fred: { release_id: 51 }
+    actual_series:
+      - { key: balance, label: Trade balance, unit: $bn, series: BOPGSTB, scale: 1000 }
+
+  # Commodities
+  eia_crude:
+    { name: EIA crude inventories, short: EIA crude, category: Commodities, star: false, source_type: rule, time_et: "10:30",
+      description: "Weekly US petroleum inventories." }
+  eia_natural_gas:
+    { name: EIA natural gas storage, short: EIA nat gas, category: Commodities, star: false, source_type: rule, time_et: "10:30",
+      description: "Weekly US natural gas storage." }
+  baker_hughes:
+    { name: Baker Hughes rig count, short: Rig count, category: Commodities, star: false, source_type: rule, time_et: "13:00",
+      description: "Weekly count of active drilling rigs." }
+  cftc_cot:
+    { name: CFTC Commitments of Traders, short: CFTC COT, category: Commodities, star: false, source_type: rule, time_et: "15:30",
+      description: "Weekly futures positioning report." }
+  wasde:
+    { name: USDA WASDE, short: WASDE, category: Commodities, star: false, source_type: manual, time_et: "12:00",
+      description: "USDA world agricultural supply and demand estimates." }
+  opec_meetings:
+    { name: OPEC+ meetings, short: OPEC+, category: Commodities, star: false, source_type: manual,
+      description: "OPEC and allied producers' meetings." }
+
+  # Earnings
+  earnings:
+    { name: Company earnings, short: Earnings, category: Earnings, star: false, source_type: earnings,
+      description: "Scheduled company earnings report." }
+
+  # Market Structure
+  options_expiration:
+    { name: Monthly options expiration, short: OPEX, category: Market Structure, star: false, source_type: rule,
+      description: "Monthly US equity and index options expiration." }
+  quad_witching:
+    { name: Quad witching and S&P rebalance, short: Quad witching, category: Market Structure, star: true, source_type: rule,
+      description: "Quarterly futures and options expiration and S&P index rebalance." }
+  vix_expiration:
+    { name: VIX expiration, short: VIX expiry, category: Market Structure, star: false, source_type: rule,
+      description: "Monthly VIX futures and options expiration." }
+  month_end:
+    { name: Month-end, short: Month-end, category: Market Structure, star: false, source_type: rule,
+      description: "Last trading day of the month." }
+  market_holidays:
+    { name: US market holidays and early closes, short: Market holiday, category: Market Structure, star: false, source_type: manual,
+      description: "NYSE closures and early closes." }
+
+  # Global
+  ecb_decision:
+    { name: ECB rate decision, short: ECB, category: Global, star: true, source_type: manual,
+      description: "European Central Bank policy rate decision." }
+  boj_decision:
+    { name: BoJ rate decision, short: BoJ, category: Global, star: true, source_type: manual,
+      description: "Bank of Japan policy rate decision." }
+  boe_decision:
+    { name: BoE rate decision, short: BoE, category: Global, star: true, source_type: manual,
+      description: "Bank of England policy rate decision." }
+  pboc_lpr:
+    { name: PBoC loan prime rate, short: PBoC LPR, category: Global, star: false, source_type: rule,
+      description: "People's Bank of China benchmark lending rate." }

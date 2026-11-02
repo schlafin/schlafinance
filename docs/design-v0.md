@@ -215,12 +215,12 @@ V0 ships 53 event definitions: 23 with FRED actuals, the rest date-only. This ta
 
 ## Data sources
 
-Two keyed APIs, one rule engine, and one hand-edited file. A daily run makes roughly 30 FRED calls and 1 Alpha Vantage call.
+Two keyed APIs, one rule engine, and one hand-edited file. A daily run makes roughly 75 FRED calls and 1 Alpha Vantage call.
 
 **FRED (St. Louis Fed)** — free static key
 
 - Release dates: `fred/release/dates` per release ID, with `include_release_dates_with_no_data=true` so future scheduled dates come back too. FRED omits those by default. ([docs](https://fred.stlouisfed.org/docs/api/fred/releases_dates.html))
-- Actuals: `fred/series/observations` per series, from 13 months before the window start, so the first YoY values in the window can be computed. The fetcher computes the transforms (MoM %, YoY %, month-over-month difference) itself; the app never does math on raw series.
+- Actuals: `fred/series/observations` per series, from 18 months before the window start, so the first YoY values in the window can be computed even on lagged series. The fetcher computes the transforms (MoM %, YoY %, month-over-month difference) itself; the app never does math on raw series.
 - Matching an observation to a release: use the date FRED first published the observation, not a calendar rule (see Design-session results). The fetcher stores that as the occurrence's `period`.
 - FRED returns the latest revised values. A trailing list will show revised history, not the value as first printed. See Open decisions.
 - Release dates come from the agencies, so a release can be rescheduled (for example during a government shutdown). The daily refresh picks that up.
@@ -301,8 +301,10 @@ Run the design-session tests before any app code. They prove each data source re
   - Empire State and Philly Fed, which publish the current month (October data on Oct 15).
   - GDP, which has three estimates per quarter, so three release dates share one period.
   - The Oct 2025 shutdown: CPI for September came out Oct 24, and October jobs data first appeared with November's on Dec 16.
-  - Proposed replacement: take each observation's first-publication date from FRED's vintage data. Not built or tested yet.
-- Multiple dates per release: release 95 (durable goods) has two dates a month, the advance report and the full M3 report, and only the advance date is this event. Release 27 (housing) lists 4 dates in the next 2 months where 2 are expected; check when building the fetcher.
+  - Replacement, built and run: each observation's first-publication date comes from FRED (`output_type=4`), and that date is the released occurrence. This handles all three cases. Only the first estimate of each GDP quarter is a first publication, so later estimates get `role: revision`.
+- Multiple dates per release: release 95 (durable goods) has two dates a month, the full M3 report and the advance report, and only the advance date is this event. Release 27 (housing) has a second date for the revised permits report. `pick_in_month` keeps the right one for future dates.
+- Other date mismatches: a date in a month that already had new data is an annual revision and is dropped. A date in a month with none stays on the calendar, with a warning for its first 14 days.
+- Added to `events.json`: `warnings`, `short` on definitions, and on occurrences `role`, `approximate`, `early_close`, `note`. `role: catch_up` marks an older period first published with a newer one (shown in the drill-down, hidden on the calendar). `role: revision` is the reverse.
 - Shutdown gaps: October 2025 has no value for CPIAUCSL, CPILFESL, UNRATE, or IR. The fetcher must return null for transforms that touch a gap, not compute across it.
 - EXHOSLUSM495S: FRED lists no release dates for it, and the series keeps only the latest 13 months (NAR license). Decided: dates are hand-entered from NAR's schedule, and actuals still come from FRED. It is the one `fred` event with manual dates, and its history is limited to what FRED holds. The 2025 dates are as scheduled, not confirmed; NAR's 2027 schedule is not yet found.
 - UMCSENT: the Oct 23 release added no October value; the newest observation stayed at September. Earlier months had no such lag. Re-check after the Nov 20 release.
@@ -327,6 +329,8 @@ Run the design-session tests before any app code. They prove each data source re
 - [ ] With `generated_at` set 40 hours back, the status line turns red.
 
 ## Open decisions and later versions
+
+**Still to enter in `manual_events.yaml`**: Beige Book, ECB, BoJ, BoE, Treasury refunding, WASDE, Jackson Hole, stress tests, Fed Chair testimony, OPEC+, and debt deadlines. Until these exist, `events.json` carries a "No occurrences" warning and the app's status line stays red.
 
 **Decide in the design session**
 

@@ -1,0 +1,13 @@
+# Symbols kept from the earnings calendar. Add star: true to star one.
+# Starter list; contents are an open decision in docs/design-v0.md.
+symbols:
+  - { symbol: AAPL }
+  - { symbol: MSFT }
+  - { symbol: NVDA }
+  - { symbol: GOOGL }
+  - { symbol: AMZN }
+  - { symbol: META }
+  - { symbol: TSLA }
+  - { symbol: JPM }
+  - { symbol: GS }
+  - { symbol: WMT }

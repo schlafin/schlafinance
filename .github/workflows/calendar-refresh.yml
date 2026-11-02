@@ -1,0 +1,31 @@
+name: Calendar refresh
+
+on:
+  schedule:
+    - cron: "0 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r calendar/fetcher/requirements.txt
+      - run: python -m pytest calendar/tests -q
+      - run: python calendar/fetcher/main.py
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          ALPHAVANTAGE_API_KEY: ${{ secrets.ALPHAVANTAGE_API_KEY }}
+      - name: Commit events.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendar/data/events.json
+          git diff --cached --quiet || git commit -m "Refresh calendar data"
+          git push

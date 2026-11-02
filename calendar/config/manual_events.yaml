@@ -1,5 +1,35 @@
 # Hand-maintained events. Each entry: definition, date, optional time, period, note.
 events:
+  # FOMC decisions and SEP, from federalreserve.gov/monetarypolicy/fomccalendars.htm.
+  # 2027 dates are tentative until confirmed at the preceding meeting.
+  - { definition: fomc_decision, date: 2025-01-29 }
+  - { definition: fomc_decision, date: 2025-03-19 }
+  - { definition: fomc_decision, date: 2025-05-07 }
+  - { definition: fomc_decision, date: 2025-06-18 }
+  - { definition: fomc_decision, date: 2025-07-30 }
+  - { definition: fomc_decision, date: 2025-09-17 }
+  - { definition: fomc_decision, date: 2025-10-29 }
+  - { definition: fomc_decision, date: 2025-12-10 }
+  - { definition: fomc_decision, date: 2026-01-28 }
+  - { definition: fomc_decision, date: 2026-03-18 }
+  - { definition: fomc_decision, date: 2026-04-29 }
+  - { definition: fomc_decision, date: 2026-06-17 }
+  - { definition: fomc_decision, date: 2026-07-29 }
+  - { definition: fomc_decision, date: 2026-09-16 }
+  - { definition: fomc_decision, date: 2026-10-28 }
+  - { definition: fomc_decision, date: 2026-12-09 }
+  - { definition: fomc_decision, date: 2027-01-27, note: "Tentative" }
+  - { definition: fomc_decision, date: 2027-03-17, note: "Tentative" }
+  - { definition: sep, date: 2025-03-19 }
+  - { definition: sep, date: 2025-06-18 }
+  - { definition: sep, date: 2025-09-17 }
+  - { definition: sep, date: 2025-12-10 }
+  - { definition: sep, date: 2026-03-18 }
+  - { definition: sep, date: 2026-06-17 }
+  - { definition: sep, date: 2026-09-16 }
+  - { definition: sep, date: 2026-12-09 }
+  - { definition: sep, date: 2027-03-17, note: "Tentative" }
+
   # NYSE full closures and 13:00 ET early closes, from nyse.com/markets/hours-calendars.
   # The rule engine reads the closures as its holiday list.
   - { definition: market_holidays, date: 2025-01-01, note: "New Year's Day" }
