@@ -1,0 +1,62 @@
+# Hand-maintained events. Each entry: definition, date, optional time, period, note.
+events:
+  # NYSE full closures and 13:00 ET early closes, from nyse.com/markets/hours-calendars.
+  # The rule engine reads the closures as its holiday list.
+  - { definition: market_holidays, date: 2025-01-01, note: "New Year's Day" }
+  - { definition: market_holidays, date: 2025-01-09, note: "National Day of Mourning for Jimmy Carter" }
+  - { definition: market_holidays, date: 2025-01-20, note: "Martin Luther King, Jr. Day" }
+  - { definition: market_holidays, date: 2025-02-17, note: "Washington's Birthday" }
+  - { definition: market_holidays, date: 2025-04-18, note: "Good Friday" }
+  - { definition: market_holidays, date: 2025-05-26, note: "Memorial Day" }
+  - { definition: market_holidays, date: 2025-06-19, note: "Juneteenth" }
+  - { definition: market_holidays, date: 2025-07-03, early_close: "13:00", note: "Early close" }
+  - { definition: market_holidays, date: 2025-07-04, note: "Independence Day" }
+  - { definition: market_holidays, date: 2025-09-01, note: "Labor Day" }
+  - { definition: market_holidays, date: 2025-11-27, note: "Thanksgiving Day" }
+  - { definition: market_holidays, date: 2025-11-28, early_close: "13:00", note: "Early close" }
+  - { definition: market_holidays, date: 2025-12-24, early_close: "13:00", note: "Early close" }
+  - { definition: market_holidays, date: 2025-12-25, note: "Christmas Day" }
+  - { definition: market_holidays, date: 2026-01-01, note: "New Year's Day" }
+  - { definition: market_holidays, date: 2026-01-19, note: "Martin Luther King, Jr. Day" }
+  - { definition: market_holidays, date: 2026-02-16, note: "Washington's Birthday" }
+  - { definition: market_holidays, date: 2026-04-03, note: "Good Friday" }
+  - { definition: market_holidays, date: 2026-05-25, note: "Memorial Day" }
+  - { definition: market_holidays, date: 2026-06-19, note: "Juneteenth" }
+  - { definition: market_holidays, date: 2026-07-03, note: "Independence Day (observed)" }
+  - { definition: market_holidays, date: 2026-09-07, note: "Labor Day" }
+  - { definition: market_holidays, date: 2026-11-26, note: "Thanksgiving Day" }
+  - { definition: market_holidays, date: 2026-11-27, early_close: "13:00", note: "Early close" }
+  - { definition: market_holidays, date: 2026-12-24, early_close: "13:00", note: "Early close" }
+  - { definition: market_holidays, date: 2026-12-25, note: "Christmas Day" }
+  - { definition: market_holidays, date: 2027-01-01, note: "New Year's Day" }
+  - { definition: market_holidays, date: 2027-01-18, note: "Martin Luther King, Jr. Day" }
+  - { definition: market_holidays, date: 2027-02-15, note: "Washington's Birthday" }
+  - { definition: market_holidays, date: 2027-03-26, note: "Good Friday" }
+  - { definition: market_holidays, date: 2027-05-31, note: "Memorial Day" }
+  - { definition: market_holidays, date: 2027-06-18, note: "Juneteenth (observed)" }
+  - { definition: market_holidays, date: 2027-07-05, note: "Independence Day (observed)" }
+  - { definition: market_holidays, date: 2027-09-06, note: "Labor Day" }
+  - { definition: market_holidays, date: 2027-11-25, note: "Thanksgiving Day" }
+  - { definition: market_holidays, date: 2027-11-26, early_close: "13:00", note: "Early close" }
+  - { definition: market_holidays, date: 2027-12-24, note: "Christmas Day (observed)" }
+
+  # Existing home sales: FRED lists no dates for this release, so NAR's are entered here.
+  # Actuals still come from EXHOSLUSM495S. FRED keeps only 13 months of values, so
+  # entries start at the oldest period it holds. Times are ET.
+  # 2025 dates are from NAR's schedule; actual publication not confirmed.
+  # Add 2027 when NAR publishes that schedule.
+  - { definition: existing_home_sales, date: 2025-10-23, time: "10:00", period: 2025-09 }
+  - { definition: existing_home_sales, date: 2025-11-20, time: "10:00", period: 2025-10 }
+  - { definition: existing_home_sales, date: 2025-12-19, time: "10:00", period: 2025-11 }
+  - { definition: existing_home_sales, date: 2026-01-14, time: "10:00", period: 2025-12 }
+  - { definition: existing_home_sales, date: 2026-02-12, time: "10:00", period: 2026-01 }
+  - { definition: existing_home_sales, date: 2026-03-10, time: "10:00", period: 2026-02 }
+  - { definition: existing_home_sales, date: 2026-04-13, time: "10:00", period: 2026-03 }
+  - { definition: existing_home_sales, date: 2026-05-11, time: "10:00", period: 2026-04 }
+  - { definition: existing_home_sales, date: 2026-06-09, time: "10:00", period: 2026-05 }
+  - { definition: existing_home_sales, date: 2026-07-09, time: "10:00", period: 2026-06 }
+  - { definition: existing_home_sales, date: 2026-08-11, time: "10:00", period: 2026-07 }
+  - { definition: existing_home_sales, date: 2026-09-10, time: "10:00", period: 2026-08 }
+  - { definition: existing_home_sales, date: 2026-10-13, time: "10:00", period: 2026-09 }
+  - { definition: existing_home_sales, date: 2026-11-12, time: "10:00", period: 2026-10 }
+  - { definition: existing_home_sales, date: 2026-12-09, time: "10:00", period: 2026-11 }

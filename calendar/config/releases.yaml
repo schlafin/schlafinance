@@ -1,0 +1,30 @@
+# FRED-backed events. Release IDs and series confirmed against FRED on 2026-11-02.
+# Stars, times and transforms are added when the fetcher is built; see docs/design-v0.md.
+releases:
+  fed_balance_sheet:     { release_id: 20,  series: [WALCL] }
+  employment_situation:  { release_id: 50,  series: [PAYEMS, UNRATE, CES0500000003] }
+  initial_claims:        { release_id: 180, series: [ICSA] }
+  jolts:                 { release_id: 192, series: [JTSJOL] }
+  employment_cost_index: { release_id: 11,  series: [ECIALLCIV] }
+  # YoY uses the unadjusted series (the BLS headline basis); MoM uses the adjusted ones.
+  cpi:                   { release_id: 10,  series: [CPIAUCNS, CPILFENS, CPIAUCSL, CPILFESL] }
+  pce:                   { release_id: 54,  series: [PCEPI, PCEPILFE] }
+  ppi:                   { release_id: 46,  series: [PPIFIS] }
+  import_prices:         { release_id: 188, series: [IR] }
+  gdp:                   { release_id: 53,  series: [A191RL1Q225SBEA] }
+  retail_sales:          { release_id: 9,   series: [RSAFS] }
+  industrial_production: { release_id: 13,  series: [INDPRO, TCU] }
+  # Release 95 is the M3 survey: two dates a month, only the advance one is this event.
+  durable_goods:         { release_id: 95,  series: [DGORDER] }
+  empire_state:          { release_id: 321, series: [GACDISA066MSFRBNY] }
+  philly_fed:            { release_id: 351, series: [GACDFSA066MSFRBPHI] }
+  umich_sentiment:       { release_id: 91,  series: [UMCSENT] }
+  consumer_credit:       { release_id: 14,  series: [TOTALSL] }
+  housing_starts:        { release_id: 27,  series: [HOUST, PERMIT] }
+  new_home_sales:        { release_id: 97,  series: [HSN1F] }
+  # FRED lists no dates for release 291, so dates come from manual_events.yaml.
+  # The series keeps only 13 months.
+  existing_home_sales:   { release_id: 291, dates: manual, series: [EXHOSLUSM495S] }
+  case_shiller:          { release_id: 199, series: [CSUSHPINSA] }
+  treasury_statement:    { release_id: 363, series: [MTSDS133FMS] }
+  trade_balance:         { release_id: 51,  series: [BOPGSTB] }
