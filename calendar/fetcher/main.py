@@ -135,7 +135,7 @@ def load_previous():
 def build(today, fred_key, alphavantage_key):
     definitions = load_definitions()
     manual = load_manual_events(definitions)
-    watchlist = {s["symbol"]: s for s in load_yaml("watchlist.yaml")["symbols"]}
+    sp500 = load_yaml("sp500.yaml")["symbols"]
     window = compute_window(today)
     previous = load_previous()
     secrets = [fred_key, alphavantage_key]
@@ -160,7 +160,7 @@ def build(today, fred_key, alphavantage_key):
 
     try:
         csv_text = earnings.download(alphavantage_key)
-        new = earnings.occurrences_from_csv(csv_text, watchlist, today)
+        new = earnings.occurrences_from_csv(csv_text, sp500, today)
         occurrences += earnings.merge_history(new, previous_for("earnings"), today)
     except (OSError, ValueError, KeyError) as e:
         occurrences += previous_for("earnings")

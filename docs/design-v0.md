@@ -8,8 +8,8 @@ schlafinance V0 is a personal macOS app with one feature: a calendar of recurrin
 
 **V0 scope**
 
-- Three calendar views: monthly, weekly, daily.
-- A multi-select category filter (13 categories) and a star toggle that shows only high-impact events.
+- Three calendar views: monthly, weekly, daily, plus a list layout that scrolls through events grouped by time.
+- A multi-select category filter (13 categories) and a star toggle that shows only high-impact events and S&P 500 earnings.
 - The calendar is backward-looking: past US macro releases show their actual value.
 - An event drill-down view: for a US macro release, a trailing list of prior actuals. For all other events, the event's details only.
 - Dark mode only, using the macOS system palette.
@@ -67,7 +67,7 @@ schlafinance/
     config/
       releases.yaml       # event catalog: FRED release IDs, series, transforms, stars
       manual_events.yaml  # FOMC, ECB, BoJ, BoE, refunding, holidays
-      watchlist.yaml      # symbols kept from the earnings calendar
+      sp500.yaml          # S&P 500 members, starred in the earnings calendar
     data/
       events.json         # written by the Action, read by the app
     tests/
@@ -209,7 +209,7 @@ V0 ships 53 event definitions: 23 with FRED actuals, the rest date-only. This ta
 - If a rule lands on a holiday: options expiration moves to the prior day; ISM, Chicago PMI, and month-end shift to the next or prior business day as the rule says; EIA and CFTC reports move one day later. Mark shifted dates as approximate in V0.
 - ADP's date is derived from the Employment Situation date, so it depends on FRED data being present.
 
-**Earnings scope**: the Alpha Vantage calendar lists thousands of companies. V0 keeps only symbols in `calendar/config/watchlist.yaml`. Every earnings event from the watchlist is shown; none are starred unless the watchlist marks them.
+**Earnings scope**: V0 keeps every company in the Alpha Vantage calendar, about 3,450 reports in 3 months. Members of the S&P 500, listed in `calendar/config/sp500.yaml`, are starred, so the star toggle narrows earnings to the S&P 500. That list needs refreshing a few times a year. The feed gives only a date plus before or after the bell, so those become fixed typical times: 07:00 ET before the open and 16:05 ET after the close. About half the reports have no timing and show as "Time TBA". The look-ahead that matters is 31 days; past earnings outside the S&P 500 are dropped after 90 days to keep `events.json` small.
 
 **Deferred from V0** (dates too irregular for a rule, or not worth the upkeep yet): Challenger job cuts, NY Fed consumer expectations, S&P Global flash PMIs, Conference Board LEI, pending home sales, NAHB, Treasury auctions, TIC data, Russell reconstitution, China and Eurozone data releases, other central banks, G7/G20, political events.
 
@@ -227,7 +227,7 @@ Two keyed APIs, one rule engine, and one hand-edited file. A daily run makes rou
 
 **Alpha Vantage** — free static key, 25 calls per day
 
-- One call per day: `EARNINGS_CALENDAR` with `horizon=3month`. Returns CSV for all US companies; the fetcher filters it to the watchlist.
+- One call per day: `EARNINGS_CALENDAR` with `horizon=3month`. Returns CSV for all US companies; the fetcher keeps them all and stars the S&P 500.
 - No other Alpha Vantage calls in V0, so the daily budget is barely touched.
 
 **Rule engine** — no API
@@ -252,11 +252,14 @@ One window: a toolbar with the view switcher and filters, the calendar below, an
 
 **Toolbar**
 
+- Layout toggle: calendar and list icons.
 - View switcher: Month · Week · Day, plus Today and previous/next arrows.
-- Category filter: multi-select menu of the 13 categories, all selected by default.
-- Star toggle: when on, only starred events show.
+- Category filter: a popover of 13 checkboxes, all selected by default, that stays open for multi-select until the user clicks outside it.
+- Star toggle: when on, only starred events show, which for earnings means the S&P 500.
 - Status line: "Updated 6h ago" from `generated_at`. Turns red past 36 hours, or when `warnings` is not empty; clicking it shows the warnings.
 - Filter and view choices persist between launches.
+
+**Today**: in month and week views, today's cell has a blue border matching its date number.
 
 **Month view**: a grid of days. Each day shows its events as compact chips (time + short name), starred events first. A day with more than about 4 events shows "+N more", which opens the day view.
 
@@ -264,14 +267,16 @@ One window: a toolbar with the view switcher and filters, the calendar below, an
 
 **Day view**: one list, events ordered by time, each with its category, star, and actual values if released.
 
+**List layout**: modeled on Google Calendar's Schedule view. One continuous scroll from the start of the window to the end, the date on the left, and events at the same time grouped under one time label. Month, Week, and Day set how far the arrows jump, and the title follows the scroll. Busy hours run to hundreds of rows, so a pinned header keeps the date and time in sight.
+
 **Event chips**: color by category, star icon if starred. Released US macro events show their headline actual on the chip in week and day views (for example "CPI 3.0% YoY").
 
-**Time zone**: events are stored in US Eastern. The app displays in the Mac's local time zone by default (Asia/Ho\_Chi\_Minh for Michael), with a setting to show ET instead. Conversion must respect US daylight saving: 08:30 ET is 20:30 local during EST and 19:30 local during EDT.
+**Time zone**: events are stored in US Eastern. The app displays in the Mac's local time zone by default (Asia/Ho\_Chi\_Minh for Michael), with a setting to show ET instead. Conversion must respect US daylight saving: 08:30 ET is 20:30 local during EST and 19:30 local during EDT. Timed events sit on their local date, so a 14:00 ET FOMC decision appears the next day in Ho Chi Minh City at 01:00 or 02:00. Events with no time stay on their listed date.
 
 **Drill-down panel** (opens beside the calendar on click)
 
 - Header: event name, category, star, description, release time.
-- For `fred` events: a table of the trailing 12 releases, newest first, one row per period, a column per actual (for example CPI: period, headline YoY, headline MoM, core YoY, core MoM). A small line chart of the main actual over the same 12 periods is optional in V0.
+- For `fred` events: a table of the trailing 12 releases, newest first, one row per period, a column per actual (for example CPI: period, headline YoY, headline MoM, core YoY, core MoM). The row for the event being viewed is highlighted; an event older than the 12 rows adds its own row at the bottom. A small line chart of the main actual over the same 12 periods is optional in V0.
 - For all other events: date, time, and notes only.
 
 **Look**: dark mode only. Use SwiftUI system colors and materials so it matches macOS dark mode exactly; force dark appearance at the app level. Category colors use system accent colors (blue, green, orange, and so on), picked for contrast on dark backgrounds.
@@ -324,9 +329,9 @@ Run the design-session tests before any app code. They prove each data source re
 - [ ] Month, week, and day views show the same events for the same dates.
 - [ ] Category filter and star toggle combine correctly, and persist after restarting the app.
 - [ ] Every released `fred` event shows its actuals, and its drill-down lists the trailing 12 periods.
-- [ ] Times display correctly in local time on both sides of a US daylight-saving change.
+- [x] Times display correctly in local time on both sides of a US daylight-saving change. (Unit tests, and seen in the app around Nov 1, 2026.)
 - [ ] With the network off, the app opens and shows the cached calendar.
-- [ ] With `generated_at` set 40 hours back, the status line turns red.
+- [x] With `generated_at` set 40 hours back, the status line turns red. (Unit test of the status logic, not run in the app.)
 
 ## Open decisions and later versions
 
@@ -343,15 +348,27 @@ Run the design-session tests before any app code. They prove each data source re
 - [ ] **Revised vs. first-print actuals.** FRED's latest values include revisions, so payrolls history will not match what was printed on release day. ALFRED (FRED's vintage archive, same key) can return first prints. Default for V0: revised values, labeled "latest revised."
 - [x] **Existing home sales.** FRED has no release dates, and only 13 months of values. Decided: enter NAR's dates by hand in `manual_events.yaml` and keep the values.
 - [ ] **FOMC decision actual.** The fed funds target range (DFEDTARU / DFEDTARL) could be attached to FOMC occurrences, making them the one `manual` event with actuals. Small addition; include or defer.
-- [ ] **Watchlist contents** for earnings, and whether watchlist earnings are starred.
+- [x] **Earnings coverage.** Decided: every company in the calendar, with the S&P 500 starred.
 - [ ] **Window size**: confirm 22 months back and 5 months forward, after checking `events.json` size.
-- [ ] **Category colors**: one color per category, 13 total, chosen for contrast on dark backgrounds.
+- [x] **Category colors**: one color per category, 13 total, set in `AppModel.swift` using system colors.
 - [ ] **60-day rule**: confirm the daily commit keeps the scheduled workflow alive; if not, add a keep-alive step.
 
 **V1**
 
 - Drill-down shows the next scheduled release date with a countdown.
 - Drill-down adds a news feed filtered to the event. Candidate source: Alpha Vantage News & Sentiment, filtered by topic. Check its free-tier fit against the 25-calls-a-day budget before committing.
+- Rate decisions show the rate set at each meeting, and whether it was a raise, cut, or hold. FRED has daily series for the Fed (DFEDTARU, DFEDTARL) and ECB (ECBDFR, ECBMRRFR). Its BoJ and BoE series are discontinued, so those need another static-key source or hand entry. ISM is not in FRED, and there is no known free source that meets the hard rule.
+- Continuous month view: replace the fixed month pages with one grid of weeks that scrolls smoothly up and down, so half of September and half of October can show together. Columns follow the Mac's first day of the week, in a header that stays pinned. The title and arrows stay, and the title follows the scroll.
+- Flags: a user-defined watch list of events. A flag toggle sits beside the star toggle and works the same way, but the user chooses what it covers.
+- Drill-down adds a chart above the table, using the form that suits each measure. Proposed starting point:
+
+| Kind of measure | Chart | Events |
+| --- | --- | --- |
+| Change over a period, where the sign matters | Bars from a zero line, negatives in a second color | Payrolls change, GDP, MoM % measures, trade balance, Treasury surplus or deficit |
+| Level or rate that moves smoothly | Line | Unemployment rate, CPI and PCE YoY, JOLTS openings, capacity utilization, Fed balance sheet, consumer credit |
+| Noisy reading around a trend | Dots with a moving-average line (4 weeks for weekly data, 3 months for monthly) | Jobless claims, Empire State, Philly Fed, UMich sentiment, housing starts, home sales |
+
+Surveys also get a reference line at zero, their expansion mark. Charts should use a longer history than the 12-row table, and leave gaps such as October 2025 as gaps rather than joining across them.
 
 **Later features of schlafinance**
 
