@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-19T04:00:15Z",
+ "generated_at": "2026-11-20T03:53:21Z",
  "window": {
   "start": "2025-01-01",
   "end": "2027-03-31"
@@ -62696,7 +62696,7 @@
    "period": "2026-11-07",
    "status": "released",
    "actuals": {
-    "initial_claims": 200.0
+    "initial_claims": 202.0
    }
   },
   {
@@ -71001,6 +71001,16 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-ARBE-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Arbe Robotics Limited earnings",
+   "symbol": "ARBE",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-ATER-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71014,6 +71024,26 @@
    "date": "2026-11-19",
    "title": "Alibaba Group Holding Limited earnings",
    "symbol": "BABA",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-BABA-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Alibaba Group Holding Limited earnings",
+   "symbol": "BABA",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-BBWI-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Bath & Body Works Incorporated earnings",
+   "symbol": "BBWI",
    "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
@@ -71037,6 +71067,24 @@
    "status": "released"
   },
   {
+   "id": "earn-BNR-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Burning Rock Biotech Limited earnings",
+   "symbol": "BNR",
+   "status": "released"
+  },
+  {
+   "id": "earn-BULL-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Webull Corporation earnings",
+   "symbol": "BULL",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
    "id": "earn-BULL-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71052,6 +71100,22 @@
    "date": "2026-11-19",
    "title": "Blaize Holdings Incorporated earnings",
    "symbol": "BZAI",
+   "status": "released"
+  },
+  {
+   "id": "earn-BZAI-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Blaize Holdings Incorporated earnings",
+   "symbol": "BZAI",
+   "status": "released"
+  },
+  {
+   "id": "earn-CATO-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Cato Corporation (The) earnings",
+   "symbol": "CATO",
    "status": "released"
   },
   {
@@ -71089,6 +71153,14 @@
    "status": "released"
   },
   {
+   "id": "earn-CMMB-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Chemomab Therapeutics Limited earnings",
+   "symbol": "CMMB",
+   "status": "released"
+  },
+  {
    "id": "earn-CPRT-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71116,11 +71188,37 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-DAO-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Youdao Incorporated earnings",
+   "symbol": "DAO",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-DOYU-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Douyu International Holdings Limited earnings",
    "symbol": "DOYU",
+   "status": "released"
+  },
+  {
+   "id": "earn-DOYU-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Douyu International Holdings Limited earnings",
+   "symbol": "DOYU",
+   "status": "released"
+  },
+  {
+   "id": "earn-DRTS-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Alpha Tau Medical Limited earnings",
+   "symbol": "DRTS",
    "status": "released"
   },
   {
@@ -71140,11 +71238,39 @@
    "status": "released"
   },
   {
+   "id": "earn-DTSS-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Datasea Intelligent Technology Limited earnings",
+   "symbol": "DTSS",
+   "status": "released"
+  },
+  {
    "id": "earn-EARN-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Ellington Credit Company earnings",
    "symbol": "EARN",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-EARN-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Ellington Credit Company earnings",
+   "symbol": "EARN",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-ESE-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Esco Technologies Incorporated earnings",
+   "symbol": "ESE",
    "status": "released",
    "time": "16:05",
    "note": "After market close (typical time)"
@@ -71170,11 +71296,41 @@
    "note": "After market close (typical time)"
   },
   {
+   "id": "earn-ESTC-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Elastic Naamloze Vennootschap earnings",
+   "symbol": "ESTC",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
    "id": "earn-EVAX-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Evaxion A/S earnings",
    "symbol": "EVAX",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-EVAX-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Evaxion A/S earnings",
+   "symbol": "EVAX",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-EVGN-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Evogene Limited earnings",
+   "symbol": "EVGN",
    "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
@@ -71198,6 +71354,24 @@
    "status": "released"
   },
   {
+   "id": "earn-FORTY-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Formula Systems (1985) Limited earnings",
+   "symbol": "FORTY",
+   "status": "released"
+  },
+  {
+   "id": "earn-FUTU-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Futu Holdings Limited earnings",
+   "symbol": "FUTU",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-FUTU-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71213,6 +71387,26 @@
    "date": "2026-11-19",
    "title": "Gap Incorporated (The) earnings",
    "symbol": "GAP",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-GAP-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Gap Incorporated (The) earnings",
+   "symbol": "GAP",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-GEOS-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Geospace Technologies Corporation earnings",
+   "symbol": "GEOS",
    "status": "released",
    "time": "16:05",
    "note": "After market close (typical time)"
@@ -71246,6 +71440,36 @@
    "note": "After market close (typical time)"
   },
   {
+   "id": "earn-GLOB-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Globant Sociedad An\u00f3nima earnings",
+   "symbol": "GLOB",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-GRRR-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Gorilla Technology Group Incorporated earnings",
+   "symbol": "GRRR",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-GRSD-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Grandstand Limited earnings",
+   "symbol": "GRSD",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
    "id": "earn-GRSD-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71261,6 +71485,22 @@
    "date": "2026-11-19",
    "title": "Hub Group Incorporated earnings",
    "symbol": "HUBG",
+   "status": "released"
+  },
+  {
+   "id": "earn-HUBG-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Hub Group Incorporated earnings",
+   "symbol": "HUBG",
+   "status": "released"
+  },
+  {
+   "id": "earn-ICG-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Intchains Group Limited earnings",
+   "symbol": "ICG",
    "status": "released"
   },
   {
@@ -71283,12 +71523,42 @@
    "star": true
   },
   {
+   "id": "earn-INTU-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Intuit Incorporated earnings",
+   "symbol": "INTU",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)",
+   "star": true
+  },
+  {
    "id": "earn-ITP-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "It Tech Packaging Incorporated earnings",
    "symbol": "ITP",
    "status": "released"
+  },
+  {
+   "id": "earn-ITP-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "It Tech Packaging Incorporated earnings",
+   "symbol": "ITP",
+   "status": "released"
+  },
+  {
+   "id": "earn-KEYS-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Keysight Technologies Incorporated earnings",
+   "symbol": "KEYS",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)",
+   "star": true
   },
   {
    "id": "earn-KEYS-2026-11-19",
@@ -71310,11 +71580,39 @@
    "status": "released"
   },
   {
+   "id": "earn-LIMN-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Liminatus Pharma Incorporated earnings",
+   "symbol": "LIMN",
+   "status": "released"
+  },
+  {
    "id": "earn-LQDT-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Liquidity Services Incorporated earnings",
    "symbol": "LQDT",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-LQDT-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Liquidity Services Incorporated earnings",
+   "symbol": "LQDT",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-MAGN-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Magnera Corporation earnings",
+   "symbol": "MAGN",
    "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
@@ -71340,6 +71638,16 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-MANU-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Manchester United Limited earnings",
+   "symbol": "MANU",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-MATW-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71348,6 +71656,24 @@
    "status": "released",
    "time": "16:05",
    "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-MATW-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Matthews International Corporation earnings",
+   "symbol": "MATW",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
+  },
+  {
+   "id": "earn-MIRA-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Mira Pharmaceuticals Incorporated earnings",
+   "symbol": "MIRA",
+   "status": "released"
   },
   {
    "id": "earn-MIRA-2026-11-19",
@@ -71368,6 +71694,24 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-MMS-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Maximus Incorporated earnings",
+   "symbol": "MMS",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-MTR-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Mesa Royalty Trust earnings",
+   "symbol": "MTR",
+   "status": "released"
+  },
+  {
    "id": "earn-MTR-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71382,6 +71726,16 @@
    "title": "Myseum.Ai Incorporated earnings",
    "symbol": "MYSE",
    "status": "released"
+  },
+  {
+   "id": "earn-NGVC-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Natural Grocers By Vitamin Cottage Incorporated earnings",
+   "symbol": "NGVC",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
   },
   {
    "id": "earn-NGVC-2026-11-19",
@@ -71412,6 +71766,24 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-NTES-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Netease Incorporated earnings",
+   "symbol": "NTES",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-OLOX-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Olenox Industries Incorporated earnings",
+   "symbol": "OLOX",
+   "status": "released"
+  },
+  {
    "id": "earn-OLOX-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71436,6 +71808,26 @@
    "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-PDD-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Pdd Holdings Incorporated earnings",
+   "symbol": "PDD",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-POST-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Post Holdings Incorporated earnings",
+   "symbol": "POST",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)"
   },
   {
    "id": "earn-POST-2026-11-19",
@@ -71464,11 +71856,27 @@
    "status": "released"
   },
   {
+   "id": "earn-PRT-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Permrock Royalty Trust earnings",
+   "symbol": "PRT",
+   "status": "released"
+  },
+  {
    "id": "earn-PULM-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Pulmatrix Incorporated earnings",
    "symbol": "PULM",
+   "status": "released"
+  },
+  {
+   "id": "earn-QUIT-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Achieve Life Sciences Incorporated earnings",
+   "symbol": "QUIT",
    "status": "released"
   },
   {
@@ -71496,11 +71904,39 @@
    "status": "released"
   },
   {
+   "id": "earn-RBNE-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Robin Energy Limited earnings",
+   "symbol": "RBNE",
+   "status": "released"
+  },
+  {
    "id": "earn-RERE-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Atrenew Incorporated earnings",
    "symbol": "RERE",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-RERE-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Atrenew Incorporated earnings",
+   "symbol": "RERE",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-ROAD-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Construction Partners Incorporated earnings",
+   "symbol": "ROAD",
    "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
@@ -71527,6 +71963,25 @@
    "star": true
   },
   {
+   "id": "earn-ROST-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Ross Stores Incorporated earnings",
+   "symbol": "ROST",
+   "status": "released",
+   "time": "16:05",
+   "note": "After market close (typical time)",
+   "star": true
+  },
+  {
+   "id": "earn-SEGG-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Sports Entertainment Gaming Global Corporation earnings",
+   "symbol": "SEGG",
+   "status": "released"
+  },
+  {
    "id": "earn-SEGG-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71540,6 +71995,22 @@
    "date": "2026-11-19",
    "title": "Serina Therapeutics Incorporated earnings",
    "symbol": "SER",
+   "status": "released"
+  },
+  {
+   "id": "earn-SER-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Serina Therapeutics Incorporated earnings",
+   "symbol": "SER",
+   "status": "released"
+  },
+  {
+   "id": "earn-SHPH-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Shuttle Pharmaceuticals Holdings Incorporated earnings",
+   "symbol": "SHPH",
    "status": "released"
   },
   {
@@ -71567,12 +72038,38 @@
    "status": "released"
   },
   {
+   "id": "earn-SOAR-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Soar Ai Incorporated earnings",
+   "symbol": "SOAR",
+   "status": "released"
+  },
+  {
    "id": "earn-STG-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Sunlands Technology Group earnings",
    "symbol": "STG",
    "status": "released"
+  },
+  {
+   "id": "earn-STG-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Sunlands Technology Group earnings",
+   "symbol": "STG",
+   "status": "released"
+  },
+  {
+   "id": "earn-TEN-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Tsakos Energy Navigation Limited earnings",
+   "symbol": "TEN",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "earn-TEN-2026-11-19",
@@ -71593,11 +72090,39 @@
    "status": "released"
   },
   {
+   "id": "earn-TPCS-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Techprecision Corporation earnings",
+   "symbol": "TPCS",
+   "status": "released"
+  },
+  {
    "id": "earn-VVV-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Valvoline Incorporated earnings",
    "symbol": "VVV",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-VVV-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Valvoline Incorporated earnings",
+   "symbol": "VVV",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-WMG-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Warner Music Group Corporation earnings",
+   "symbol": "WMG",
    "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
@@ -71624,6 +72149,17 @@
    "star": true
   },
   {
+   "id": "earn-WMT-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Walmart Incorporated earnings",
+   "symbol": "WMT",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)",
+   "star": true
+  },
+  {
    "id": "earn-WSM-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
@@ -71633,6 +72169,25 @@
    "time": "07:00",
    "note": "Before market open (typical time)",
    "star": true
+  },
+  {
+   "id": "earn-WSM-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Williams-Sonoma Incorporated earnings",
+   "symbol": "WSM",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)",
+   "star": true
+  },
+  {
+   "id": "earn-XYF-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "X Financial earnings",
+   "symbol": "XYF",
+   "status": "released"
   },
   {
    "id": "earn-XYF-2026-11-19",
@@ -71653,11 +72208,37 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-YMM-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Full Truck Alliance Company Limited earnings",
+   "symbol": "YMM",
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-ZONE-2026-11-19",
    "definition": "earnings",
    "date": "2026-11-19",
    "title": "Zone Frontier Incorporated earnings",
    "symbol": "ZONE",
+   "status": "released"
+  },
+  {
+   "id": "earn-ZONE-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Zone Frontier Incorporated earnings",
+   "symbol": "ZONE",
+   "status": "released"
+  },
+  {
+   "id": "earn-ZSQR-2026-11-19",
+   "definition": "earnings",
+   "date": "2026-11-19",
+   "title": "Z Squared Incorporated earnings",
+   "symbol": "ZSQR",
    "status": "released"
   },
   {
@@ -71678,31 +72259,43 @@
    "id": "fed_balance_sheet-2026-11-19",
    "definition": "fed_balance_sheet",
    "date": "2026-11-19",
-   "status": "scheduled"
+   "period": "2026-11-18",
+   "status": "released",
+   "actuals": {
+    "total_assets": 6741.0
+   }
   },
   {
    "id": "initial_claims-2026-11-19",
    "definition": "initial_claims",
    "date": "2026-11-19",
-   "status": "scheduled"
+   "period": "2026-11-14",
+   "status": "released",
+   "actuals": {
+    "initial_claims": 203.0
+   }
   },
   {
    "id": "philly_fed-2026-11-19",
    "definition": "philly_fed",
    "date": "2026-11-19",
-   "status": "scheduled"
+   "period": "2026-11",
+   "status": "released",
+   "actuals": {
+    "current_activity": 6.3
+   }
   },
   {
    "id": "baker_hughes-2026-11-20",
    "definition": "baker_hughes",
    "date": "2026-11-20",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "cftc_cot-2026-11-20",
    "definition": "cftc_cot",
    "date": "2026-11-20",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-AAME-2026-11-20",
@@ -71710,15 +72303,7 @@
    "date": "2026-11-20",
    "title": "Atlantic American Corporation earnings",
    "symbol": "AAME",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-AMOD-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Alpha Modus Holdings Incorporated earnings",
-   "symbol": "AMOD",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-AMSS-2026-11-20",
@@ -71726,7 +72311,7 @@
    "date": "2026-11-20",
    "title": "Amass Brands Incorporated earnings",
    "symbol": "AMSS",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-AREC-2026-11-20",
@@ -71734,7 +72319,7 @@
    "date": "2026-11-20",
    "title": "American Resources Corporation earnings",
    "symbol": "AREC",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-ASBP-2026-11-20",
@@ -71742,7 +72327,7 @@
    "date": "2026-11-20",
    "title": "Aspire-Lakewood Holdings Incorporated earnings",
    "symbol": "ASBP",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-ATXG-2026-11-20",
@@ -71750,31 +72335,7 @@
    "date": "2026-11-20",
    "title": "Addentax Group Corporation earnings",
    "symbol": "ATXG",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-BEBE-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Tge Value Creative Solutions Corporation earnings",
-   "symbol": "BEBE",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-BEEM-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Beam Global earnings",
-   "symbol": "BEEM",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-BESS-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Bimergen Energy Corporation earnings",
-   "symbol": "BESS",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-BGLC-2026-11-20",
@@ -71782,7 +72343,7 @@
    "date": "2026-11-20",
    "title": "Bionexus Gene Lab Corporation earnings",
    "symbol": "BGLC",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-BJ-2026-11-20",
@@ -71790,7 +72351,7 @@
    "date": "2026-11-20",
    "title": "Bj'S Wholesale Club Holdings Incorporated earnings",
    "symbol": "BJ",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
   },
@@ -71800,17 +72361,9 @@
    "date": "2026-11-20",
    "title": "Buckle Incorporated (The) earnings",
    "symbol": "BKE",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
-  },
-  {
-   "id": "earn-BOXL-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Boxlight Corporation earnings",
-   "symbol": "BOXL",
-   "status": "scheduled"
   },
   {
    "id": "earn-BSP-2026-11-20",
@@ -71818,7 +72371,7 @@
    "date": "2026-11-20",
    "title": "Bending Spoons S.P.A. earnings",
    "symbol": "BSP",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
   },
@@ -71828,15 +72381,7 @@
    "date": "2026-11-20",
    "title": "Nuburu Incorporated earnings",
    "symbol": "BURU",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-BXBL-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Boxabl Incorporated earnings",
-   "symbol": "BXBL",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-CELU-2026-11-20",
@@ -71844,47 +72389,7 @@
    "date": "2026-11-20",
    "title": "Celularity Incorporated earnings",
    "symbol": "CELU",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-CEPF-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Cantor Equity Partners Iv Incorporated earnings",
-   "symbol": "CEPF",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-CEPO-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Cantor Equity Partners I Incorporated earnings",
-   "symbol": "CEPO",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-CEPS-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Cantor Equity Partners Vi Incorporated earnings",
-   "symbol": "CEPS",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-CEPV-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Cantor Equity Partners V Incorporated earnings",
-   "symbol": "CEPV",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-CHGA-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Change Agents Corporation earnings",
-   "symbol": "CHGA",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-CIRC-2026-11-20",
@@ -71892,7 +72397,7 @@
    "date": "2026-11-20",
    "title": "Circle8 Group Incorporated earnings",
    "symbol": "CIRC",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-COSM-2026-11-20",
@@ -71900,7 +72405,7 @@
    "date": "2026-11-20",
    "title": "Cosmos Health Incorporated earnings",
    "symbol": "COSM",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-DBGI-2026-11-20",
@@ -71908,7 +72413,7 @@
    "date": "2026-11-20",
    "title": "Digital Brands Group Incorporated earnings",
    "symbol": "DBGI",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-DLNG-2026-11-20",
@@ -71916,7 +72421,7 @@
    "date": "2026-11-20",
    "title": "Dynagas Lng Partners Limited Partnership earnings",
    "symbol": "DLNG",
-   "status": "scheduled",
+   "status": "released",
    "time": "16:05",
    "note": "After market close (typical time)"
   },
@@ -71926,23 +72431,7 @@
    "date": "2026-11-20",
    "title": "Enlivex Limited earnings",
    "symbol": "ENLV",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-FBLG-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Fibrobiologics Incorporated earnings",
-   "symbol": "FBLG",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-FKWL-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Franklin Wireless Corporation earnings",
-   "symbol": "FKWL",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-FRO-2026-11-20",
@@ -71950,7 +72439,7 @@
    "date": "2026-11-20",
    "title": "Frontline Public Limited Company earnings",
    "symbol": "FRO",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
   },
@@ -71960,39 +72449,7 @@
    "date": "2026-11-20",
    "title": "Flexible Solutions International Incorporated earnings",
    "symbol": "FSI",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-FTFT-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Future Fintech Group Incorporated earnings",
-   "symbol": "FTFT",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-GIPR-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Generation Income Properties Incorporated earnings",
-   "symbol": "GIPR",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-GLSI-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Greenwich Lifesciences Incorporated earnings",
-   "symbol": "GLSI",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-GTBP-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Gt Biopharma Incorporated earnings",
-   "symbol": "GTBP",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-GYGY-2026-11-20",
@@ -72000,15 +72457,7 @@
    "date": "2026-11-20",
    "title": "Game Your Game Incorporated earnings",
    "symbol": "GYGY",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-HOST-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Host Digital Incorporated earnings",
-   "symbol": "HOST",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-ICON-2026-11-20",
@@ -72016,7 +72465,7 @@
    "date": "2026-11-20",
    "title": "Icon Energy Corporation earnings",
    "symbol": "ICON",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-IESC-2026-11-20",
@@ -72024,31 +72473,9 @@
    "date": "2026-11-20",
    "title": "Ies Holdings Incorporated earnings",
    "symbol": "IESC",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-IVDA-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Iveda Solutions Incorporated earnings",
-   "symbol": "IVDA",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-JTAI-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Jet.Ai Incorporated earnings",
-   "symbol": "JTAI",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-JUNS-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Jupiter Neurosciences Incorporated earnings",
-   "symbol": "JUNS",
-   "status": "scheduled"
+   "status": "released",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "earn-KT-2026-11-20",
@@ -72056,31 +72483,7 @@
    "date": "2026-11-20",
    "title": "Kt Corporation earnings",
    "symbol": "KT",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-LPL-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Lg Display Company Limited earnings",
-   "symbol": "LPL",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-MAMO-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Massimo Group earnings",
-   "symbol": "MAMO",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-MODD-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Modular Medical Incorporated earnings",
-   "symbol": "MODD",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-MOG.A-2026-11-20",
@@ -72088,7 +72491,7 @@
    "date": "2026-11-20",
    "title": "Moog Incorporated earnings",
    "symbol": "MOG.A",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
   },
@@ -72098,17 +72501,9 @@
    "date": "2026-11-20",
    "title": "Moog Incorporated earnings",
    "symbol": "MOG.B",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
-  },
-  {
-   "id": "earn-MSN-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Emerson Radio Corporation earnings",
-   "symbol": "MSN",
-   "status": "scheduled"
   },
   {
    "id": "earn-MYSZ-2026-11-20",
@@ -72116,7 +72511,7 @@
    "date": "2026-11-20",
    "title": "My Size Incorporated earnings",
    "symbol": "MYSZ",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-NEUP-2026-11-20",
@@ -72124,15 +72519,7 @@
    "date": "2026-11-20",
    "title": "Neuphoria Therapeutics Incorporated earnings",
    "symbol": "NEUP",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-NNVC-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Nanoviricides Incorporated earnings",
-   "symbol": "NNVC",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-NORD-2026-11-20",
@@ -72140,7 +72527,7 @@
    "date": "2026-11-20",
    "title": "Nordicus Partners Corporation earnings",
    "symbol": "NORD",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-OLB-2026-11-20",
@@ -72148,31 +72535,7 @@
    "date": "2026-11-20",
    "title": "The Olb Group Incorporated earnings",
    "symbol": "OLB",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-ONMD-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Onemednet Corporation earnings",
-   "symbol": "ONMD",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-OSTX-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Os Therapies Incorporated earnings",
-   "symbol": "OSTX",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-PPBT-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Purple Biotech Limited earnings",
-   "symbol": "PPBT",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-PVL-2026-11-20",
@@ -72180,7 +72543,7 @@
    "date": "2026-11-20",
    "title": "Permianville Royalty Trust earnings",
    "symbol": "PVL",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-QXL-2026-11-20",
@@ -72188,7 +72551,7 @@
    "date": "2026-11-20",
    "title": "Quantum X Labs Incorporated earnings",
    "symbol": "QXL",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-RLX-2026-11-20",
@@ -72196,17 +72559,9 @@
    "date": "2026-11-20",
    "title": "Rlx Technology Incorporated earnings",
    "symbol": "RLX",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
-  },
-  {
-   "id": "earn-RNAZ-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Transcode Therapeutics Incorporated earnings",
-   "symbol": "RNAZ",
-   "status": "scheduled"
   },
   {
    "id": "earn-SCLX-2026-11-20",
@@ -72214,15 +72569,7 @@
    "date": "2026-11-20",
    "title": "Scilex Holding Company earnings",
    "symbol": "SCLX",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-SGLY-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Singularity Future Technology Limited earnings",
-   "symbol": "SGLY",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-SIDU-2026-11-20",
@@ -72230,7 +72577,7 @@
    "date": "2026-11-20",
    "title": "Sidus Space Incorporated earnings",
    "symbol": "SIDU",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-SONM-2026-11-20",
@@ -72238,7 +72585,7 @@
    "date": "2026-11-20",
    "title": "Dna X Incorporated earnings",
    "symbol": "SONM",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-SOWG-2026-11-20",
@@ -72246,7 +72593,7 @@
    "date": "2026-11-20",
    "title": "Sow Good Incorporated earnings",
    "symbol": "SOWG",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-SUNE-2026-11-20",
@@ -72254,7 +72601,7 @@
    "date": "2026-11-20",
    "title": "Sunation Energy Incorporated earnings",
    "symbol": "SUNE",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-TCRT-2026-11-20",
@@ -72262,31 +72609,7 @@
    "date": "2026-11-20",
    "title": "Alaunos Therapeutics Incorporated earnings",
    "symbol": "TCRT",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-TGL-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Treasure Global Incorporated earnings",
-   "symbol": "TGL",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-TRUG-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Trugolf Holdings Incorporated earnings",
-   "symbol": "TRUG",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-UAVS-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Ageagle Aerial Systems Incorporated earnings",
-   "symbol": "UAVS",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-VBIO-2026-11-20",
@@ -72294,15 +72617,7 @@
    "date": "2026-11-20",
    "title": "Valion Bio Incorporated earnings",
    "symbol": "VBIO",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-VHC-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Virnetx Holding Corporation earnings",
-   "symbol": "VHC",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-WRD-2026-11-20",
@@ -72310,7 +72625,7 @@
    "date": "2026-11-20",
    "title": "Weride Incorporated earnings",
    "symbol": "WRD",
-   "status": "scheduled",
+   "status": "released",
    "time": "07:00",
    "note": "Before market open (typical time)"
   },
@@ -72320,15 +72635,7 @@
    "date": "2026-11-20",
    "title": "Exicure Incorporated earnings",
    "symbol": "XCUR",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-XSLL-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Xsolla Spac 1 earnings",
-   "symbol": "XSLL",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-XWEL-2026-11-20",
@@ -72336,27 +72643,19 @@
    "date": "2026-11-20",
    "title": "Xwell Incorporated earnings",
    "symbol": "XWEL",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-YHC-2026-11-20",
-   "definition": "earnings",
-   "date": "2026-11-20",
-   "title": "Lqr House Incorporated earnings",
-   "symbol": "YHC",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "options_expiration-2026-11-20",
    "definition": "options_expiration",
    "date": "2026-11-20",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "pboc_lpr-2026-11-20",
    "definition": "pboc_lpr",
    "date": "2026-11-20",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "umich_sentiment-2026-11-20",
@@ -72461,7 +72760,9 @@
    "date": "2026-11-23",
    "title": "Central Garden & Pet Company earnings",
    "symbol": "CENT",
-   "status": "scheduled"
+   "status": "scheduled",
+   "time": "16:05",
+   "note": "After market close (typical time)"
   },
   {
    "id": "earn-CENTA-2026-11-23",
@@ -72469,7 +72770,9 @@
    "date": "2026-11-23",
    "title": "Central Garden & Pet Company earnings",
    "symbol": "CENTA",
-   "status": "scheduled"
+   "status": "scheduled",
+   "time": "16:05",
+   "note": "After market close (typical time)"
   },
   {
    "id": "earn-CMP-2026-11-23",
@@ -72497,14 +72800,6 @@
    "date": "2026-11-23",
    "title": "Currenc Group Incorporated earnings",
    "symbol": "CURR",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-CVKD-2026-11-23",
-   "definition": "earnings",
-   "date": "2026-11-23",
-   "title": "Cadrenal Therapeutics Incorporated earnings",
-   "symbol": "CVKD",
    "status": "scheduled"
   },
   {
@@ -72610,14 +72905,6 @@
    "status": "scheduled"
   },
   {
-   "id": "earn-MTNB-2026-11-23",
-   "definition": "earnings",
-   "date": "2026-11-23",
-   "title": "Matinas Biopharma Holdings Incorporated earnings",
-   "symbol": "MTNB",
-   "status": "scheduled"
-  },
-  {
    "id": "earn-PFLT-2026-11-23",
    "definition": "earnings",
    "date": "2026-11-23",
@@ -72656,14 +72943,6 @@
    "status": "scheduled",
    "time": "16:05",
    "note": "After market close (typical time)"
-  },
-  {
-   "id": "earn-TEO-2026-11-23",
-   "definition": "earnings",
-   "date": "2026-11-23",
-   "title": "Telecom Argentina Stet - France Telecom Sociedad An\u00f3nima earnings",
-   "symbol": "TEO",
-   "status": "scheduled"
   },
   {
    "id": "earn-THCH-2026-11-23",
@@ -72853,6 +73132,24 @@
    "status": "scheduled"
   },
   {
+   "id": "earn-CMBT-2026-11-24",
+   "definition": "earnings",
+   "date": "2026-11-24",
+   "title": "Cmb.Tech Nv earnings",
+   "symbol": "CMBT",
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
+   "id": "earn-DAVA-2026-11-24",
+   "definition": "earnings",
+   "date": "2026-11-24",
+   "title": "Endava Public Limited Company earnings",
+   "symbol": "DAVA",
+   "status": "scheduled"
+  },
+  {
    "id": "earn-DELL-2026-11-24",
    "definition": "earnings",
    "date": "2026-11-24",
@@ -72885,6 +73182,14 @@
    "star": true
   },
   {
+   "id": "earn-DRVN-2026-11-24",
+   "definition": "earnings",
+   "date": "2026-11-24",
+   "title": "Driven Brands Holdings Incorporated earnings",
+   "symbol": "DRVN",
+   "status": "scheduled"
+  },
+  {
    "id": "earn-DY-2026-11-24",
    "definition": "earnings",
    "date": "2026-11-24",
@@ -72905,11 +73210,37 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-EVTL-2026-11-24",
+   "definition": "earnings",
+   "date": "2026-11-24",
+   "title": "Vertical Aerospace Limited earnings",
+   "symbol": "EVTL",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-FLX-2026-11-24",
+   "definition": "earnings",
+   "date": "2026-11-24",
+   "title": "Bingex Limited earnings",
+   "symbol": "FLX",
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-GASS-2026-11-24",
    "definition": "earnings",
    "date": "2026-11-24",
    "title": "Stealthgas Incorporated earnings",
    "symbol": "GASS",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-GDRX-2026-11-24",
+   "definition": "earnings",
+   "date": "2026-11-24",
+   "title": "Goodrx Holdings Incorporated earnings",
+   "symbol": "GDRX",
    "status": "scheduled"
   },
   {
@@ -72996,15 +73327,9 @@
    "date": "2026-11-24",
    "title": "Movado Group Incorporated earnings",
    "symbol": "MOV",
-   "status": "scheduled"
-  },
-  {
-   "id": "earn-NIO-2026-11-24",
-   "definition": "earnings",
-   "date": "2026-11-24",
-   "title": "Nio Incorporated earnings",
-   "symbol": "NIO",
-   "status": "scheduled"
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "earn-NOAH-2026-11-24",
@@ -73138,6 +73463,14 @@
    "date": "2026-11-24",
    "title": "Yiren Digital Limited earnings",
    "symbol": "YRD",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-ZENA-2026-11-24",
+   "definition": "earnings",
+   "date": "2026-11-24",
+   "title": "Zenatech Incorporated earnings",
+   "symbol": "ZENA",
    "status": "scheduled"
   },
   {
@@ -73330,6 +73663,16 @@
    "note": "Before market open (typical time)"
   },
   {
+   "id": "earn-NNOX-2026-11-25",
+   "definition": "earnings",
+   "date": "2026-11-25",
+   "title": "Nano-X Imaging Limited earnings",
+   "symbol": "NNOX",
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-OPHI-2026-11-25",
    "definition": "earnings",
    "date": "2026-11-25",
@@ -73384,16 +73727,6 @@
    "status": "scheduled"
   },
   {
-   "id": "earn-CMBT-2026-11-26",
-   "definition": "earnings",
-   "date": "2026-11-26",
-   "title": "Cmb.Tech Nv earnings",
-   "symbol": "CMBT",
-   "status": "scheduled",
-   "time": "07:00",
-   "note": "Before market open (typical time)"
-  },
-  {
    "id": "market_holidays-2026-11-26",
    "definition": "market_holidays",
    "date": "2026-11-26",
@@ -73440,7 +73773,7 @@
    "id": "earn-VMAR-2026-11-27",
    "definition": "earnings",
    "date": "2026-11-27",
-   "title": "Vision Marine Technologies Incorporated earnings",
+   "title": "Vision Marine Technologies Inc earnings",
    "symbol": "VMAR",
    "status": "scheduled"
   },
@@ -73566,6 +73899,17 @@
    "note": "After market close (typical time)"
   },
   {
+   "id": "earn-CPRT-2026-12-01",
+   "definition": "earnings",
+   "date": "2026-12-01",
+   "title": "Copart Incorporated earnings",
+   "symbol": "CPRT",
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)",
+   "star": true
+  },
+  {
    "id": "earn-CRDO-2026-12-01",
    "definition": "earnings",
    "date": "2026-12-01",
@@ -73592,7 +73936,9 @@
    "date": "2026-12-01",
    "title": "Citi Trends Incorporated earnings",
    "symbol": "CTRN",
-   "status": "scheduled"
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "earn-GTLB-2026-12-01",
@@ -73652,6 +73998,16 @@
    "note": "After market close (typical time)"
   },
   {
+   "id": "earn-NIO-2026-12-01",
+   "definition": "earnings",
+   "date": "2026-12-01",
+   "title": "Nio Incorporated earnings",
+   "symbol": "NIO",
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
+  },
+  {
    "id": "earn-NTAP-2026-12-01",
    "definition": "earnings",
    "date": "2026-12-01",
@@ -73689,6 +74045,16 @@
    "title": "Village Super Market Incorporated earnings",
    "symbol": "VLGEA",
    "status": "scheduled"
+  },
+  {
+   "id": "earn-VSTS-2026-12-01",
+   "definition": "earnings",
+   "date": "2026-12-01",
+   "title": "Vestis Corporation earnings",
+   "symbol": "VSTS",
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "ism_manufacturing-2026-12-01",
@@ -73831,7 +74197,9 @@
    "date": "2026-12-02",
    "title": "Macy'S Incorporated earnings",
    "symbol": "M",
-   "status": "scheduled"
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "earn-MEI-2026-12-02",
@@ -73931,7 +74299,9 @@
    "date": "2026-12-02",
    "title": "Waterdrop Incorporated earnings",
    "symbol": "WDH",
-   "status": "scheduled"
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "earn-YB-2026-12-02",
@@ -74427,14 +74797,6 @@
    "status": "scheduled"
   },
   {
-   "id": "earn-VSTS-2026-12-07",
-   "definition": "earnings",
-   "date": "2026-12-07",
-   "title": "Vestis Corporation earnings",
-   "symbol": "VSTS",
-   "status": "scheduled"
-  },
-  {
    "id": "earn-ALZN-2026-12-08",
    "definition": "earnings",
    "date": "2026-12-08",
@@ -74510,6 +74872,8 @@
    "title": "Caseys General Stores Incorporated earnings",
    "symbol": "CASY",
    "status": "scheduled",
+   "time": "16:05",
+   "note": "After market close (typical time)",
    "star": true
   },
   {
@@ -74552,7 +74916,9 @@
    "date": "2026-12-08",
    "title": "Designer Brands Incorporated earnings",
    "symbol": "DBI",
-   "status": "scheduled"
+   "status": "scheduled",
+   "time": "07:00",
+   "note": "Before market open (typical time)"
   },
   {
    "id": "earn-ESOA-2026-12-08",
@@ -74864,6 +75230,14 @@
    "date": "2026-12-09",
    "title": "U.S. Gold Corporation earnings",
    "symbol": "USAU",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-VRSA-2026-12-09",
+   "definition": "earnings",
+   "date": "2026-12-09",
+   "title": "Versa Bancorp earnings",
+   "symbol": "VRSA",
    "status": "scheduled"
   },
   {
@@ -75788,14 +76162,6 @@
    "status": "scheduled"
   },
   {
-   "id": "earn-SPWR-2026-12-18",
-   "definition": "earnings",
-   "date": "2026-12-18",
-   "title": "Sunpower Incorporated earnings",
-   "symbol": "SPWR",
-   "status": "scheduled"
-  },
-  {
    "id": "earn-WGO-2026-12-18",
    "definition": "earnings",
    "date": "2026-12-18",
@@ -76078,7 +76444,7 @@
    "id": "earn-EBF-2026-12-28",
    "definition": "earnings",
    "date": "2026-12-28",
-   "title": "Ennis Inc earnings",
+   "title": "Ennis Incorporated earnings",
    "symbol": "EBF",
    "status": "scheduled"
   },
@@ -76086,7 +76452,7 @@
    "id": "earn-ENGN-2026-12-28",
    "definition": "earnings",
    "date": "2026-12-28",
-   "title": "Engene Holdings Inc earnings",
+   "title": "Engene Therapeutics Incorporated earnings",
    "symbol": "ENGN",
    "status": "scheduled"
   },
@@ -76094,7 +76460,7 @@
    "id": "earn-MSS-2026-12-28",
    "definition": "earnings",
    "date": "2026-12-28",
-   "title": "Maison Solutions Inc - Class A earnings",
+   "title": "Maison Solutions Incorporated earnings",
    "symbol": "MSS",
    "status": "scheduled"
   },
@@ -76102,7 +76468,7 @@
    "id": "earn-MWYN-2026-12-28",
    "definition": "earnings",
    "date": "2026-12-28",
-   "title": "Marwynn Holdings Inc earnings",
+   "title": "Marwynn Holdings Incorporated earnings",
    "symbol": "MWYN",
    "status": "scheduled"
   },
@@ -76110,7 +76476,7 @@
    "id": "earn-SIF-2026-12-28",
    "definition": "earnings",
    "date": "2026-12-28",
-   "title": "Sifco Industries Inc earnings",
+   "title": "Sifco Industries Incorporated earnings",
    "symbol": "SIF",
    "status": "scheduled"
   },
@@ -76404,6 +76770,14 @@
    "status": "scheduled"
   },
   {
+   "id": "earn-PCYO-2027-01-06",
+   "definition": "earnings",
+   "date": "2027-01-06",
+   "title": "Pure Cycle Corp earnings",
+   "symbol": "PCYO",
+   "status": "scheduled"
+  },
+  {
    "id": "earn-PSMT-2027-01-06",
    "definition": "earnings",
    "date": "2027-01-06",
@@ -76630,6 +77004,15 @@
    "status": "scheduled"
   },
   {
+   "id": "earn-BAC-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Bank Of America Corp earnings",
+   "symbol": "BAC",
+   "status": "scheduled",
+   "star": true
+  },
+  {
    "id": "earn-BGOUF-2027-01-13",
    "definition": "earnings",
    "date": "2027-01-13",
@@ -76638,11 +77021,109 @@
    "status": "scheduled"
   },
   {
+   "id": "earn-BMRA-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Biomerica Inc earnings",
+   "symbol": "BMRA",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-C-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Citigroup Inc earnings",
+   "symbol": "C",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-FNGR-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Fingermotion Inc earnings",
+   "symbol": "FNGR",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-FUL-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "H.B. Fuller Company earnings",
+   "symbol": "FUL",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-HOMB-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Home Bancshares Inc earnings",
+   "symbol": "HOMB",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-HOVR-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "New Horizon Aircraft Ltd earnings",
+   "symbol": "HOVR",
+   "status": "scheduled"
+  },
+  {
    "id": "earn-INFY-2027-01-13",
    "definition": "earnings",
    "date": "2027-01-13",
    "title": "Infosys Ltd earnings",
    "symbol": "INFY",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-LOOP-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Loop Industries Inc earnings",
+   "symbol": "LOOP",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-NTRP-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Neurotrope Inc earnings",
+   "symbol": "NTRP",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-RFIL-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Rf Industries Ltd earnings",
+   "symbol": "RFIL",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-UCB-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "United Community Banks Inc earnings",
+   "symbol": "UCB",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-WFC-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Wells Fargo & Company earnings",
+   "symbol": "WFC",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-XHG-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Xchange Tec.Inc American Depositary Shares earnings",
+   "symbol": "XHG",
    "status": "scheduled"
   },
   {
@@ -77892,6 +78373,103 @@
    "date": "2027-02-16",
    "title": "Smupf earnings",
    "symbol": "SMUPF",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-AMPL-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Amplitude Inc - Class A earnings",
+   "symbol": "AMPL",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-AWR-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "American States Water Company earnings",
+   "symbol": "AWR",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-BTG-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "B2Gold Corp earnings",
+   "symbol": "BTG",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-BTRCF-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Btrcf earnings",
+   "symbol": "BTRCF",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-CNH-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Cnh Industrial Nv earnings",
+   "symbol": "CNH",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-EFGIF-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Efgif earnings",
+   "symbol": "EFGIF",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-EQX-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Equinox Gold Corp earnings",
+   "symbol": "EQX",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-NESR-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "National Energy Services Reunited Corp earnings",
+   "symbol": "NESR",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-OXY-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Occidental Petroleum Corp earnings",
+   "symbol": "OXY",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-RANJF-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Ranjf earnings",
+   "symbol": "RANJF",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-SB-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Safe Bulkers Inc earnings",
+   "symbol": "SB",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-SNMYF-2027-02-17",
+   "definition": "earnings",
+   "date": "2027-02-17",
+   "title": "Snmyf earnings",
+   "symbol": "SNMYF",
    "status": "scheduled"
   },
   {
