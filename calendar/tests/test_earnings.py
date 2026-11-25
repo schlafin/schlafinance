@@ -60,3 +60,17 @@ def test_merge_keeps_starred_history_and_trims_old_unstarred():
     ]
     merged = earnings.merge_history([{"id": "e", "date": "2026-11-21"}], previous, TODAY)
     assert [o["id"] for o in merged] == ["a", "c", "e"]
+
+
+def test_merge_keeps_one_copy_of_a_report_in_both_lists():
+    # The previous file may already hold a report twice (Nov 2026 bug).
+    previous = [
+        {"id": "earn-AAPL-2026-11-01", "date": "2026-11-01", "star": True, "status": "scheduled"},
+        {"id": "earn-AAPL-2026-11-01", "date": "2026-11-01", "star": True, "status": "scheduled"},
+        {"id": "earn-MSFT-2026-10-30", "date": "2026-10-30", "star": True},
+        {"id": "earn-MSFT-2026-10-30", "date": "2026-10-30", "star": True},
+    ]
+    new = [{"id": "earn-AAPL-2026-11-01", "date": "2026-11-01", "star": True, "status": "released"}]
+    merged = earnings.merge_history(new, previous, TODAY)
+    assert [o["id"] for o in merged] == ["earn-AAPL-2026-11-01", "earn-MSFT-2026-10-30"]
+    assert merged[0]["status"] == "released"

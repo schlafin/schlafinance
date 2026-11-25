@@ -15,6 +15,18 @@ struct EventsFile: Decodable {
         case warnings, definitions, occurrences
     }
 
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        schemaVersion = try c.decode(Int.self, forKey: .schemaVersion)
+        generatedAt = try c.decode(Date.self, forKey: .generatedAt)
+        warnings = try c.decode([String].self, forKey: .warnings)
+        definitions = try c.decode([String: Definition].self, forKey: .definitions)
+        // A repeated id keeps its first copy: one bad file must not stop the app from opening.
+        var seen = Set<String>()
+        occurrences = try c.decode([Occurrence].self, forKey: .occurrences)
+            .filter { seen.insert($0.id).inserted }
+    }
+
     static func decode(_ data: Data) throws -> EventsFile {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601

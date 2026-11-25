@@ -211,6 +211,8 @@ V0 ships 53 event definitions: 23 with FRED actuals, the rest date-only. This ta
 
 **Earnings scope**: V0 keeps every company in the Alpha Vantage calendar, about 3,450 reports in 3 months. Members of the S&P 500, listed in `calendar/config/sp500.yaml`, are starred, so the star toggle narrows earnings to the S&P 500. That list needs refreshing a few times a year. The feed gives only a date plus before or after the bell, so those become fixed typical times: 07:00 ET before the open and 16:05 ET after the close. About half the reports have no timing and show as "Time TBA". The look-ahead that matters is 31 days; past earnings outside the S&P 500 are dropped after 90 days to keep `events.json` small.
 
+Fixed Nov 25, 2026: from Nov 3 the app crashed on launch. The refresh runs in the US evening, when the feed still lists that day's reports, so each run added them a second time beside the copy carried over from the previous file (3,279 repeats by Nov 25). The app crashed on a repeated id, even offline, because its saved copy had them too. The fetcher now keeps one copy of each report, and the app shows a repeated id once instead of crashing.
+
 **Deferred from V0** (dates too irregular for a rule, or not worth the upkeep yet): Challenger job cuts, NY Fed consumer expectations, S&P Global flash PMIs, Conference Board LEI, pending home sales, NAHB, Treasury auctions, TIC data, Russell reconstitution, China and Eurozone data releases, other central banks, G7/G20, political events.
 
 ## Data sources

@@ -53,10 +53,17 @@ def occurrences_from_csv(text, sp500, today):
 
 
 def merge_history(new, previous, today):
-    """The calendar has only future dates, so past ones come from the last file."""
+    """The calendar has mostly future dates, so past ones come from the last file.
+
+    The run happens in the US evening, when the feed still lists that day's
+    reports, so a report can be in both lists. Each id is kept once, and the
+    feed's copy wins.
+    """
     oldest_unstarred = (today - PAST_UNSTARRED).isoformat()
     past = [
         o for o in previous
         if o["date"] < today.isoformat() and (o.get("star") or o["date"] >= oldest_unstarred)
     ]
-    return sorted(past + new, key=lambda o: o["id"])
+    by_id = {o["id"]: o for o in past}
+    by_id.update({o["id"]: o for o in new})
+    return sorted(by_id.values(), key=lambda o: o["id"])

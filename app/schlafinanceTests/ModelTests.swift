@@ -63,6 +63,11 @@ final class ModelTests: XCTestCase {
         XCTAssertNil(events[0].time)
     }
 
+    func testRepeatedIdIsShownOnce() throws {
+        let events = try file(occurrences: "[\(occurrence("a", "opex", "2026-11-20")), \(occurrence("a", "opex", "2026-11-20"))]")
+        XCTAssertEqual(events.occurrences.count, 1)
+    }
+
     // MARK: - Roles and drill-down
 
     func testCatchUpIsHiddenFromTheCalendarButListedInTheDrillDown() throws {
