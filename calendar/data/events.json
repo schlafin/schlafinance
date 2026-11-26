@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-25T15:23:23Z",
+ "generated_at": "2026-11-26T04:43:22Z",
  "window": {
   "start": "2025-01-01",
   "end": "2027-03-31"
@@ -44285,7 +44285,7 @@
    "id": "earn-PLG-2026-11-25",
    "definition": "earnings",
    "date": "2026-11-25",
-   "title": "Platinum Group Metals Limited earnings",
+   "title": "Platinum Group Metals Ltd earnings",
    "symbol": "PLG",
    "status": "released"
   },
@@ -44351,7 +44351,12 @@
    "id": "gdp-2026-11-25",
    "definition": "gdp",
    "date": "2026-11-25",
-   "status": "scheduled"
+   "period": "2026-Q3",
+   "status": "released",
+   "actuals": {
+    "real_gdp": 4.3
+   },
+   "role": "revision"
   },
   {
    "id": "initial_claims-2026-11-25",
@@ -44390,7 +44395,7 @@
    "date": "2026-11-26",
    "title": "Burning Rock Biotech Limited earnings",
    "symbol": "BNR",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-BZAI-2026-11-26",
@@ -44398,7 +44403,7 @@
    "date": "2026-11-26",
    "title": "Blaize Holdings Incorporated earnings",
    "symbol": "BZAI",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-DOYU-2026-11-26",
@@ -44406,7 +44411,7 @@
    "date": "2026-11-26",
    "title": "Douyu International Holdings Limited earnings",
    "symbol": "DOYU",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-DTSS-2026-11-26",
@@ -44414,7 +44419,7 @@
    "date": "2026-11-26",
    "title": "Datasea Intelligent Technology Limited earnings",
    "symbol": "DTSS",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-FORTY-2026-11-26",
@@ -44422,7 +44427,7 @@
    "date": "2026-11-26",
    "title": "Formula Systems (1985) Limited earnings",
    "symbol": "FORTY",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-HUBG-2026-11-26",
@@ -44430,7 +44435,7 @@
    "date": "2026-11-26",
    "title": "Hub Group Incorporated earnings",
    "symbol": "HUBG",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-ICG-2026-11-26",
@@ -44438,7 +44443,7 @@
    "date": "2026-11-26",
    "title": "Intchains Group Limited earnings",
    "symbol": "ICG",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-ITP-2026-11-26",
@@ -44446,7 +44451,7 @@
    "date": "2026-11-26",
    "title": "It Tech Packaging Incorporated earnings",
    "symbol": "ITP",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-MTR-2026-11-26",
@@ -44454,7 +44459,7 @@
    "date": "2026-11-26",
    "title": "Mesa Royalty Trust earnings",
    "symbol": "MTR",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-PRT-2026-11-26",
@@ -44462,7 +44467,7 @@
    "date": "2026-11-26",
    "title": "Permrock Royalty Trust earnings",
    "symbol": "PRT",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-QUIT-2026-11-26",
@@ -44470,7 +44475,7 @@
    "date": "2026-11-26",
    "title": "Achieve Life Sciences Incorporated earnings",
    "symbol": "QUIT",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-SEGG-2026-11-26",
@@ -44478,7 +44483,7 @@
    "date": "2026-11-26",
    "title": "Sports Entertainment Gaming Global Corporation earnings",
    "symbol": "SEGG",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-SHPH-2026-11-26",
@@ -44486,7 +44491,7 @@
    "date": "2026-11-26",
    "title": "Shuttle Pharmaceuticals Holdings Incorporated earnings",
    "symbol": "SHPH",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "earn-TPCS-2026-11-26",
@@ -44494,13 +44499,13 @@
    "date": "2026-11-26",
    "title": "Techprecision Corporation earnings",
    "symbol": "TPCS",
-   "status": "scheduled"
+   "status": "released"
   },
   {
    "id": "market_holidays-2026-11-26",
    "definition": "market_holidays",
    "date": "2026-11-26",
-   "status": "scheduled",
+   "status": "released",
    "note": "Thanksgiving Day"
   },
   {
@@ -48033,6 +48038,14 @@
    "status": "scheduled"
   },
   {
+   "id": "earn-BFLR-2027-01-13",
+   "definition": "earnings",
+   "date": "2027-01-13",
+   "title": "Blueflare Inc earnings",
+   "symbol": "BFLR",
+   "status": "scheduled"
+  },
+  {
    "id": "earn-BGOUF-2027-01-13",
    "definition": "earnings",
    "date": "2027-01-13",
@@ -48061,7 +48074,7 @@
    "id": "earn-FNGR-2027-01-13",
    "definition": "earnings",
    "date": "2027-01-13",
-   "title": "Fingermotion Inc earnings",
+   "title": "Fingermotion Incorporated earnings",
    "symbol": "FNGR",
    "status": "scheduled"
   },
@@ -48458,6 +48471,15 @@
    "status": "scheduled"
   },
   {
+   "id": "earn-USB-2027-01-15",
+   "definition": "earnings",
+   "date": "2027-01-15",
+   "title": "U.S. Bancorp. earnings",
+   "symbol": "USB",
+   "status": "scheduled",
+   "star": true
+  },
+  {
    "id": "earn-WIT-2027-01-15",
    "definition": "earnings",
    "date": "2027-01-15",
@@ -48495,6 +48517,140 @@
    "note": "Martin Luther King, Jr. Day"
   },
   {
+   "id": "earn-ASRV-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Ameriserv Financial Inc earnings",
+   "symbol": "ASRV",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-CMND-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Clearmind Medicine Inc earnings",
+   "symbol": "CMND",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-COSO-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Coastalsouth Bancshares Inc earnings",
+   "symbol": "COSO",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-DHI-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "D.R. Horton Inc earnings",
+   "symbol": "DHI",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-FAST-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Fastenal Company earnings",
+   "symbol": "FAST",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-FITB-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Fifth Third Bancorp earnings",
+   "symbol": "FITB",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-FNB-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "F.N.B. Corp earnings",
+   "symbol": "FNB",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-FOR-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Forestar Group Inc New earnings",
+   "symbol": "FOR",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-FVCB-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Fvcbankcorp Inc earnings",
+   "symbol": "FVCB",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-HWC-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Hancock Whitney Corp earnings",
+   "symbol": "HWC",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-IBKR-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Interactive Brokers Group Inc - Class A earnings",
+   "symbol": "IBKR",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-KARO-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Karooooo Ltd earnings",
+   "symbol": "KARO",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-KEY-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Keycorp earnings",
+   "symbol": "KEY",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-MBWM-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Mercantile Bank Corp earnings",
+   "symbol": "MBWM",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-MCB-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Metropolitan Bank Holding Corp earnings",
+   "symbol": "MCB",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-MMM-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "3M Company earnings",
+   "symbol": "MMM",
+   "status": "scheduled",
+   "star": true
+  },
+  {
    "id": "earn-MTB-PH-2027-01-19",
    "definition": "earnings",
    "date": "2027-01-19",
@@ -48511,11 +48667,108 @@
    "status": "scheduled"
   },
   {
-   "id": "earn-USB-2027-01-19",
+   "id": "earn-NFLX-2027-01-19",
    "definition": "earnings",
    "date": "2027-01-19",
-   "title": "U.S. Bancorp. earnings",
-   "symbol": "USB",
+   "title": "Netflix Inc earnings",
+   "symbol": "NFLX",
+   "status": "scheduled",
+   "star": true
+  },
+  {
+   "id": "earn-NIC-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Nicolet Bankshares Inc earnings",
+   "symbol": "NIC",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-NPB-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Northpointe Bancshares Inc earnings",
+   "symbol": "NPB",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-OZK-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Bank Ozk earnings",
+   "symbol": "OZK",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-PEBO-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Peoples Bancorp Inc (Marietta Oh) earnings",
+   "symbol": "PEBO",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-PRGS-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Progress Software Corp earnings",
+   "symbol": "PRGS",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-RR-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Richtech Robotics Inc - Class B earnings",
+   "symbol": "RR",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-SFBS-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Servisfirst Bancshares Inc earnings",
+   "symbol": "SFBS",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-SFNC-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Simmons First National Corp - Class A earnings",
+   "symbol": "SFNC",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-SMBK-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Smartfinancial Inc earnings",
+   "symbol": "SMBK",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-SPCX-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Space Exploration Technologies Corp - Class A earnings",
+   "symbol": "SPCX",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-TPET-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Trio Petroleum Corp earnings",
+   "symbol": "TPET",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-UAL-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "United Airlines Holdings Inc earnings",
+   "symbol": "UAL",
    "status": "scheduled",
    "star": true
   },
@@ -48568,6 +48821,22 @@
    "status": "scheduled"
   },
   {
+   "id": "earn-WTFC-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Wintrust Financial Corp earnings",
+   "symbol": "WTFC",
+   "status": "scheduled"
+  },
+  {
+   "id": "earn-ZION-2027-01-19",
+   "definition": "earnings",
+   "date": "2027-01-19",
+   "title": "Zions Bancorporation N.A earnings",
+   "symbol": "ZION",
+   "status": "scheduled"
+  },
+  {
    "id": "earn-CFG-2027-01-20",
    "definition": "earnings",
    "date": "2027-01-20",
@@ -48591,15 +48860,6 @@
    "title": "Cfg-Ph earnings",
    "symbol": "CFG-PH",
    "status": "scheduled"
-  },
-  {
-   "id": "earn-KEY-2027-01-20",
-   "definition": "earnings",
-   "date": "2027-01-20",
-   "title": "Keycorp earnings",
-   "symbol": "KEY",
-   "status": "scheduled",
-   "star": true
   },
   {
    "id": "earn-KEY-PI-2027-01-20",
